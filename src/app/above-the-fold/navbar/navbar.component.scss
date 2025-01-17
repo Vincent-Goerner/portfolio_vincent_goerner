@@ -1,0 +1,58 @@
+@import '../../shared/mixin.scss';
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include dFlex($js: space-between);
+    max-width: 1440px;
+    width: 100vw;
+    height: 96px;
+    padding: 0 96px;
+    box-sizing: border-box;
+    font-family: 'fira code';
+}
+
+.navbar-links {
+    @include dFlex();
+    gap: 32px;
+
+    >a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+
+        &:hover {
+            color: #3dcfb6;
+            text-decoration: solid;
+        }
+    }
+
+    >div {
+        width: 84px;
+        height: 28px;
+        background-color: rgba(255, 255, 255, 0);
+        border: solid 1px #3dcfb6;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        @include dFlex();
+        &:hover {
+            border: solid 1px white;
+        }
+        >button {
+            color: #337c6f;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #337c6f00;
+            &:hover {
+                color: #3dcfb6;
+            }
+        }
+        >.navbar-language-switch {
+            background-color: #3dcfb6;
+        }
+    }
+}
