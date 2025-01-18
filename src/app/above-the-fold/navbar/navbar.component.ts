@@ -7,12 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
+
 export class NavbarComponent {
   changeLanguage: Boolean = true;
   language: string = this.switchLanguage();
 
   switchLanguage() {
     this.changeLanguage = !this.changeLanguage;
-    return (this.changeLanguage) ? 'EN' : 'DE';
+    return this.language = (this.changeLanguage) ? 'EN' : 'DE';
   }
 }

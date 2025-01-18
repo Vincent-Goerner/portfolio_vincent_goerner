@@ -1,9 +1,7 @@
 @import '../../shared/mixin.scss';
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include position($pos: fixed);
     @include dFlex($js: space-between);
     max-width: 1440px;
     width: 100vw;
@@ -29,6 +27,7 @@ nav {
     }
 
     >div {
+        @include position($pos: relative);
         width: 84px;
         height: 28px;
         background-color: rgba(255, 255, 255, 0);
@@ -38,12 +37,16 @@ nav {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         @include dFlex();
+        font-size: 16px;
+
         &:hover {
             border: solid 1px white;
         }
+
         >button {
+            width: 40px;
+            height: 28px;
             color: #337c6f;
-            font-size: 16px;
             cursor: pointer;
             border: none;
             background-color: #337c6f00;
@@ -51,8 +54,21 @@ nav {
                 color: #3dcfb6;
             }
         }
-        >.navbar-language-switch {
-            background-color: #3dcfb6;
-        }
     }
+}
+
+.navbar-language-switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include dFlex();
+    width: 42px;
+    height: 28px;
+    border-radius: 100px;
+    background-color: #3dcfb6;
+    transition: all 125ms ease-in-out;
+}
+
+.navbar-language-slider {
+    transform: translateX(100%);
 }

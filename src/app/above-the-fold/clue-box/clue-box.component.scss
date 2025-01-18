@@ -1,0 +1,8 @@
+@import '../../shared/mixin.scss';
+
+.clue-box {
+    width: 100vw;
+    padding: 92px;
+    @include position($vertical: bottom);
+    @include dFlex($js: space-between);
+}

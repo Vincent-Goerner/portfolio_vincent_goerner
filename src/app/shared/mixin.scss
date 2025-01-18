@@ -3,3 +3,9 @@
     justify-content: $js;
     align-items: $ai;
 }
+
+@mixin position($pos: absolute, $vertical: top, $vpos: 0, $horizontal: left, $hpos: 0) {
+    position: $pos;
+    $vertical: $vpos;
+    $horizontal: $hpos;
+}
