@@ -1,7 +1,9 @@
 @import '../../shared/mixin.scss';
 
 nav {
-    @include position($pos: fixed);
+    position: absolute;
+    top: 0;
+    left: 0;
     @include dFlex($js: space-between);
     max-width: 1440px;
     width: 100vw;

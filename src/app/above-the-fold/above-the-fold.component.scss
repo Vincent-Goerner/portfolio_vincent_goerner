@@ -1,22 +1,33 @@
 @import '../shared/mixin.scss';
+@import '../shared/variables.scss';
 
-.above-the-fold {
+.above-the-fold-bg {
     @include dFlex();
     flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-image: url("../../assets/img/background.png");
     background-size: cover;
-    font-family: 'Karla';
+}
+
+.above-the-fold-content {
+    @include dFlex();
+    flex-direction: column;
+    @include position($pos: relative);
+    max-width: 1440px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .headlines {
     @include dFlex();
     flex-direction: column;
-    
+
     >h1 {
         color: white;
+        font-family: 'karla';
         font-size: 128px;
+        margin-bottom: 50px;
     }
 
     >h2 {
@@ -24,5 +35,40 @@
         font-family: 'fira code';
         font-size: 40px;
         font-weight: 400;
+    }
+}
+
+.shortcut {
+    @include dFlex($js: space-between);
+    height: 48px;
+    gap: 48px;
+    z-index: 2;
+
+    >button {
+        height: 48px;
+        border: solid 1px #FFFFFF;
+        background-color: #ffffff00;
+        color: white;
+        font-family: 'karla';
+        font-size: 18px;
+        padding: 0 24px;
+        cursor: pointer;
+        border-radius: 100px;
+        overflow: hidden;
+
+        &:hover {
+            color: $green;
+            border: solid 1px $green;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
     }
 }

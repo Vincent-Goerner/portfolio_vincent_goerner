@@ -1,8 +1,62 @@
 @import '../../shared/mixin.scss';
+@import '../../shared/variables.scss';
 
 .clue-box {
+    @include dFlex($js: space-between, $ai: end);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 1440px;
     width: 100vw;
-    padding: 92px;
-    @include position($vertical: bottom);
-    @include dFlex($js: space-between);
+    padding: 0 72px;
+    box-sizing: border-box;
+}
+
+.clue-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    gap: 24px;
+
+    >.clue-line-green {
+        width: 1px;
+        height: 240px;
+        background-color: $green;
+    }
+}
+
+.clue-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    gap: 16px;
+
+    >a {
+        transform: rotate(-90deg);
+        margin-bottom: 70px;
+        text-decoration: none;
+        color: white;
+        font-family: 'karla';
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    >.clue-github {
+        cursor: pointer;
+    }
+
+    >.clue-linkedin {
+        cursor: pointer;
+    }
+
+    >.clue-line-white {
+        width: 1px;
+        height: 180px;
+        background-color: white;
+        margin-top: 16px;
+    }
 }
