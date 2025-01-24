@@ -39,18 +39,11 @@
         text-decoration: none;
         color: white;
         font-family: 'karla';
+        transition: all 125ms ease-in-out;
 
         &:hover {
             color: $green;
         }
-    }
-
-    >.clue-github {
-        cursor: pointer;
-    }
-
-    >.clue-linkedin {
-        cursor: pointer;
     }
 
     >.clue-line-white {
@@ -58,5 +51,51 @@
         height: 180px;
         background-color: white;
         margin-top: 16px;
+    }
+}
+
+.clue-img-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+
+    >.clue-github {
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+    }
+
+    >.clue-github-hover {
+        position: absolute;
+        top: 0;
+        right: -28px;
+        opacity: 0;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+    
+    >.clue-linkedin {
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+    >.clue-linkedin-hover {
+        position: absolute;
+        bottom: 0;
+        right: -28px;
+        opacity: 0;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }

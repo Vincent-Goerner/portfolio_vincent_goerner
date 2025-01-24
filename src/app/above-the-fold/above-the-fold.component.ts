@@ -11,5 +11,22 @@ import { ClueBoxComponent } from './clue-box/clue-box.component';
 })
 
 export class AboveTheFoldComponent {
+  marqueSpeedWork: number = 0;
+  marqueSpeedContact: number = 0;
 
+  constructor() {
+  }
+
+  startMarquee(btn: string) {
+    if (btn == 'work') {
+      this.marqueSpeedWork = 6;
+    } else {
+      this.marqueSpeedContact = 6;
+    }
+  }
+
+  stopMarquee() {
+    this.marqueSpeedContact = 0;
+    this.marqueSpeedWork = 0;
+  }
 }

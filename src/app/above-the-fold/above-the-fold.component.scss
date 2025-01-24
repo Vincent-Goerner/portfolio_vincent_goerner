@@ -38,37 +38,32 @@
     }
 }
 
-.shortcut {
+.atf-shortcut {
     @include dFlex($js: space-between);
     height: 48px;
     gap: 48px;
     z-index: 2;
 
-    >button {
+    >marquee {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
         height: 48px;
         border: solid 1px #FFFFFF;
+        border-radius: 100px;
+        direction: left;
         background-color: #ffffff00;
         color: white;
         font-family: 'karla';
         font-size: 18px;
-        padding: 0 24px;
+        padding-left: 24px;
+        padding-right: 24px;
         cursor: pointer;
-        border-radius: 100px;
-        overflow: hidden;
 
         &:hover {
             color: $green;
             border: solid 1px $green;
         }
-    }
-}
-
-@keyframes marquee {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: -100%;
     }
 }

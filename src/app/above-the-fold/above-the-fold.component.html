@@ -4,15 +4,11 @@
         <div class="headlines">
             <h2>Frontend Developer</h2>
             <h1>Vincent Görner</h1>
-            <div class="shortcut">
-                <button><span>Check my work</span></button>
-                <button><span>Contact me</span></button>
+            <div class="atf-shortcut">
+                <marquee (mouseover)="startMarquee('work')" (mouseout)="stopMarquee()" [scrollAmount]="marqueSpeedWork">Check my work</marquee>
+                <marquee (mouseover)="startMarquee('contact')" (mouseout)="stopMarquee()" [scrollAmount]="marqueSpeedContact">Contact me</marquee>
             </div>
         </div>
         <app-clue-box></app-clue-box>
     </div>
 </section>
-
-
-
-
