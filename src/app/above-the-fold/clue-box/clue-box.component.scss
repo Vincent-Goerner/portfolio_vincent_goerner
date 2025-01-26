@@ -2,7 +2,9 @@
 @import '../../shared/variables.scss';
 
 .clue-box {
-    @include dFlex($js: space-between, $ai: end);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -97,5 +99,28 @@
         &:hover {
             opacity: 1;
         }
+    }
+}
+
+.clue-marquee {
+    position: absolute;
+    bottom: 45px;
+    left: -10px;
+    transform: rotate(-3deg);
+    width: 105vw;
+    padding: 10px 0;
+    font-family: 'karla';
+    font-size: 32px;
+    color: $green;
+    background: #FFFFFF1F;
+
+    >.clue-marquee-point {
+        background-color: $green;
+        width: 8px;
+        height: 8px;
+        border: solid 1px $green;
+        border-radius: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }

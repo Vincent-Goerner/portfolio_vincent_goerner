@@ -14,21 +14,11 @@ nav {
 }
 
 .navbar-links {
-    @include dFlex();
+    display: flex;
+    align-items: center;
     gap: 32px;
 
-    >a {
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-        transition: all 125ms ease-in-out;
-
-        &:hover {
-            color: #3dcfb6;
-        }
-    }
-
-    >div {
+    >.navbar-language-box {
         @include position($pos: relative);
         width: 84px;
         height: 28px;
@@ -56,6 +46,52 @@ nav {
             &:hover {
                 color: #3dcfb6;
             }
+        }
+    }
+}
+
+.navbar-links-box {
+    width: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    >img {
+        position: absolute;
+        transition: all 125ms ease-in-out;
+    }
+
+    >.navbar-about-me {
+        left: 0;
+    }
+    >.navbar-about-me-hover {
+        bottom: -21px;
+        left: 0;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    >.navbar-skills {
+        left: 120px;
+    }
+    >.navbar-skills-hover {
+        left: 120px;
+        bottom: -21px;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .navbar-projects {
+        left: 215px;
+    }
+    >.navbar-projects-hover {
+        left: 215px;
+        bottom: -21px;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
         }
     }
 }

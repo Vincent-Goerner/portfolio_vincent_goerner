@@ -6,12 +6,14 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-image: url("../../assets/img/background.png");
+    background-image: url("../../assets/img/atf_section/background.png");
     background-size: cover;
+    overflow: hidden;
 }
 
 .above-the-fold-content {
-    @include dFlex();
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     @include position($pos: relative);
     max-width: 1440px;
