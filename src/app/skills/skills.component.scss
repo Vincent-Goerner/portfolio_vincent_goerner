@@ -1,0 +1,83 @@
+@import '../shared/general.scss';
+
+.skills-bg {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/img/skills/skills_bg.svg");
+    background-size: cover;
+    padding: 0 96px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    >.skills {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        max-width: 1440px;
+    }
+}
+
+.description-text-box {
+    >div {
+        display: flex;
+        gap: 8px;
+
+        >h2 {
+            font-family: 'fira code';
+        }
+
+        >.skills-h2 {
+            color: white;
+        }
+    }
+}
+
+.skills-technologies-overview {
+    display: flex;
+    flex-wrap: wrap;
+    width: 630px;
+    height: 430px;
+    margin-top: 145px;
+    gap: 72px;
+
+    >.skills-technologie {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        font-family: 'fira code';
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        gap: 8px;
+
+        >img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    >.growth-mindset {
+        >.skills-intrests {
+            width: 195px;
+            height: 135px;
+            position: absolute;
+            right: 193px;
+            bottom: 405px;
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $green;
+        
+            >.skills-intrests {
+                opacity: 1;
+            }
+        }
+    }
+}

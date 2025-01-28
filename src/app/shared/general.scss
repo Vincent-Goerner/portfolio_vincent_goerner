@@ -1,0 +1,71 @@
+@import '../shared/variables.scss';
+
+.btn {
+    width: fit-content;
+    height: 48px;
+    border: solid 1px #FFFFFF;
+    border-radius: 100px;
+    direction: left;
+    background-color: #ffffff00;
+    color: white;
+    font-family: 'karla';
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    cursor: pointer;
+
+    &:hover {
+        color: $green;
+        border: solid 1px $green;
+    }
+}
+
+.description-box {
+    margin-top: 100px;
+    width: 570px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.description-text-box {
+    padding: 32px;
+    border: solid 1px #3DCFB6;
+    border-radius: 30px;
+    background-color: #3DCFB61A;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.description-text {
+    font-family: 'karla';
+    font-size: 18px;
+    color: white;
+}
+
+.description-details {
+    font-family: 'karla';
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    margin: 0;
+    font-size: 64px;
+    font-family: 'karla';
+    color: #3DCFB6;
+}
+
+h2 {
+    font-family: 'karla';
+    margin: 0;
+    font-size: 24px;
+    color: #3DCFB6;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'karla';
+    color: #3DCFB6;
+}
