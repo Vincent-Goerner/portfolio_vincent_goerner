@@ -1,0 +1,61 @@
+@import '../shared/general.scss';
+
+.projects-bg {
+    background-color: #1C1C1C;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 100px;
+
+    >.projects-headline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    >.description-text {
+        width: 450px;
+    }
+}
+
+.projects-overview-box {
+    width: 880px;
+    border-top: solid 1px $green;
+
+    >.projects-overview {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: solid 1px $green;
+        padding: 40px 32px;
+
+        >.projects-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        img {
+            opacity: 0;
+        }
+
+        >.description-text {
+            >span {
+                color: $green;
+            }
+        }
+
+        &:hover {
+            background-color: #2F5B53;
+            transition: all 125ms ease-in-out;
+
+            img {
+                opacity: 1;
+            }
+        }
+    }
+}

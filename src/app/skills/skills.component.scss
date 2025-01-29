@@ -29,7 +29,7 @@
         }
 
         >.skills-h2 {
-            color: white;
+            color: $green;
         }
     }
 }
@@ -61,12 +61,14 @@
     }
 
     >.growth-mindset {
+        position: relative;
+
         >.skills-intrests {
             width: 195px;
             height: 135px;
             position: absolute;
-            right: 193px;
-            bottom: 405px;
+            left: -7px;
+            bottom: 75px;
             opacity: 0;
             transition: all 125ms ease-in-out;
         }

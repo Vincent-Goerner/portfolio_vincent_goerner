@@ -1,5 +1,13 @@
 @import '../shared/variables.scss';
 
+.section-bg {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 96px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 .btn {
     width: fit-content;
     height: 48px;
@@ -67,5 +75,11 @@ h2 {
 h3 {
     font-size: 24px;
     font-family: 'karla';
-    color: #3DCFB6;
+    color: white;
+}
+
+.horizontal-seperator {
+    height: 1px;
+    width: 100%;
+    background-color: $green;
 }
