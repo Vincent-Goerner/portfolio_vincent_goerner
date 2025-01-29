@@ -2,6 +2,8 @@
 
 .projects-bg {
     background-color: #1C1C1C;
+    margin: auto;
+    width: 1440px;
 }
 
 .projects {
@@ -31,6 +33,12 @@
         justify-content: space-between;
         border-bottom: solid 1px $green;
         padding: 40px 32px;
+        position: relative;
+        transition: all 125ms ease-in-out;
+
+        img {
+            opacity: 0;
+        }
 
         >.projects-title {
             display: flex;
@@ -39,19 +47,28 @@
             gap: 4px;
         }
 
-        img {
-            opacity: 0;
-        }
-
         >.description-text {
             >span {
                 color: $green;
             }
         }
 
+        >.projects-title-img {
+            position: absolute;
+            top: -45px;
+            right: -400px;
+            width: 300px;
+        }
+
+        >.projects-img-bg {
+            position: absolute;
+            top: -30px;
+            right: -415px;
+            width: 300px;
+        }
+
         &:hover {
             background-color: #2F5B53;
-            transition: all 125ms ease-in-out;
 
             img {
                 opacity: 1;

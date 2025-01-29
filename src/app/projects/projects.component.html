@@ -11,19 +11,21 @@
         </div>
         <div class="projects-overview-box">
             @for (p of projects; track p; let i = $index) {
-            <div class="projects-overview">
-                <div class="projects-title">
-                    <h3>{{ p.name }}</h3> <img src="../../assets/img/projects/arrow.png">
-                </div>
-                <div class="description-text">
+                <div class="projects-overview">
+                    <div class="projects-title">
+                        <h3>{{ p.name }}</h3> <img src="../../assets/img/projects/arrow.png">
+                    </div>
+                    <div class="description-text">
                     @for (t of p.technologies; track t; let l = $index) {
-                        @if (l > 0) {
-                            <span>|</span>
+                            @if (l > 0) {
+                                <span>|</span>
+                            }
+                            {{ t }}
                         }
-                        {{ t }}
-                    }
+                    </div>
+                    <img class="projects-img-bg" src="../../assets/img/projects/img_bg.png">
+                    <img class="projects-title-img" src="{{ p.img }}">
                 </div>
-            </div>
             }
         </div>
     </div>

@@ -12,11 +12,13 @@ export class ProjectsComponent {
   projects = [
     {
       name: 'Join',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'GIT']
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'GIT'],
+      img: '../../assets/img/projects/join.png'
     },
     {
       name: 'The Leagacy of the Living',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'GIT']
+      technologies: ['HTML', 'CSS', 'JavaScript', 'GIT'],
+      img: '../../assets/img/projects/el_polo_loco.png'
     }
   ];
 
