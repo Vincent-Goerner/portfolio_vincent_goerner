@@ -1,0 +1,147 @@
+@import '../../shared/variables.scss';
+@import '../../shared/general.scss';
+
+.project-test {
+    position: absolute;
+    top: 50px;
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../../../assets/img/projects/background.png");
+    background-size: cover;
+    border: solid 1px $green;
+    border-radius: 30px;
+    padding: 60px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateX(150%);
+    transition: all 125ms ease-in-out;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 540px;
+
+    >.project-title {
+        display: flex;
+        flex-direction: column;
+
+        >span {
+            font-size: 128px;
+            color: $green;
+            font-family: 'karla';
+            font-weight: 700;
+        }
+
+        >h1 {
+            font-family: 'fira code';
+            color: white;
+        }
+    }
+
+    >h2 {
+        font-family: 'fira code';
+    }
+
+    >.project-tech-list {
+        display: flex;
+        gap: 16px;
+
+        >div {
+            display: flex;
+            gap: 6px;
+        }
+    }
+
+    .project-technologie {
+        font-family: 'karla';
+        font-size: 16px;
+        color: white;
+    }
+
+    >.project-btn {
+        display: flex;
+        gap: 32px;
+
+        >button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+
+            >img {
+                transition: all 125ms ease-in-out;
+            }
+
+            &:hover {
+                >img {
+                    transform: translateX(4px) translateY(-4px);
+                }
+            }
+        }
+    }
+}
+
+.project-example {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 40px;
+    width: 520px;
+
+
+    >.project-close {
+        position: relative;
+        cursor: pointer;
+
+        >.project-close-btn-hover {
+            position: absolute;
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:hover {
+            >.project-close-btn-hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    >button {
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: $green;
+        position: absolute;
+        bottom: 60px;
+        cursor: pointer;
+
+        >.project-next-project-hover {
+            position: absolute;
+            right: 10px;
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:hover {
+            >img {
+                transition: all 125ms ease-in-out;
+                opacity: 0;
+            }
+
+            >.project-next-project-hover {
+                transform: translateX(4px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.show-details {
+    opacity: 1;
+    transform: translateX(0%);
+}

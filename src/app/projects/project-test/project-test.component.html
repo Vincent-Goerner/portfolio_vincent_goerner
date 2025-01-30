@@ -1,0 +1,34 @@
+<div class="project-test" [class.show-details]="projectData.showProjectDetails">
+    <div class="project-description">
+        <div class="project-title">
+            <span>0{{ projectIndex + 1 }}</span>
+            <h1> {{projectData.projects[projectIndex].name}} </h1>
+        </div>
+        <h2>What is this project about?</h2>
+        <p class="description-text">
+            Task manager inspired by the Kanban System. Create and
+            organize tasks using drag and drop functions, assign
+            users and categories.
+        </p>
+        <div class="project-tech-list">
+            @for (t of projectData.projects[projectIndex].technologies_logo; track t; let i = $index) {
+                <div>
+                    <img src="{{ projectData.technologieImg[i] }}">
+                    <span class="project-technologie">{{ projectData.projects[projectIndex].technologies[i] }}</span>
+                </div>
+            }
+        </div>
+        <div class="project-btn">
+            <button class="btn">GitHub <img src="../../../assets/img/projects/arrow_green.png"></button>
+            <button class="btn">Live Test <img src="../../../assets/img/projects/arrow_green.png"></button>
+        </div>
+    </div>
+    <div class="project-example">
+        <div class="project-close" (click)="closeDetails()">
+            <img class="project-close-btn-hover" src="../../../assets/img/projects/close_hover.png">
+            <img src="../../../assets/img/projects/close.png">
+        </div>
+        <img src=" {{ projectData.projects[projectIndex].preview }} ">
+        <button class="description-text" (click)="loadNextProject()">Next project <img src="../../../assets/img/projects/next_project.png"><img class="project-next-project-hover" src="../../../assets/img/projects/next_project_hover.png"></button>
+    </div>
+</div>

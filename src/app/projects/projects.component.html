@@ -11,7 +11,7 @@
         </div>
         <div class="projects-overview-box">
             @for (p of projects; track p; let i = $index) {
-                <div class="projects-overview">
+                <div class="projects-overview" (click)="setProjectData(i)">
                     <div class="projects-title">
                         <h3>{{ p.name }}</h3> <img src="../../assets/img/projects/arrow.png">
                     </div>
@@ -28,5 +28,6 @@
                 </div>
             }
         </div>
+        <app-project-test [projectIndex]="loadIndex"></app-project-test>
     </div>
 </section>
