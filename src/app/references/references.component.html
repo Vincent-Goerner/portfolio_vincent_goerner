@@ -1,0 +1,26 @@
+<section class="references-bg section-bg">
+    <div class="references">
+        <h2>What my colleagues say about me</h2>
+        <div class="references-overview-box">
+            <div class="references-overview">
+                @for (r of references; track r; let i = $index) {
+                    <div class="references-feedback description-text">
+                        <p>{{ r.feedback }}</p>
+                        <div><div class="references-line"></div>{{ r.autor }}</div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="references-navbar">
+            <img class="references-left-hover" src="../../assets/img/references/left_hover.png">
+            <img src="../../assets/img/references/left.png">
+            <div>
+                @for (n of references; track $index) {
+                    <div class="references-nav-point"></div>
+                }
+            </div>
+            <img class="references-right-hover" src="../../assets/img/references/right_hover.png">
+            <img src="../../assets/img/references/right.png">
+        </div>
+    </div>
+</section>

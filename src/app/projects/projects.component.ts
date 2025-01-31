@@ -36,9 +36,11 @@ export class ProjectsComponent {
   ];
   loadIndex:number = 0;
   showProjectDetails:boolean = false;
+  
 
   setProjectData(i:number) {
     this.loadIndex = i;
     this.showProjectDetails = true;
+    
   }
 }

@@ -4,7 +4,7 @@ import { ProjectsComponent } from '../projects.component';
 @Component({
   selector: 'app-project-test',
   standalone: true,
-  imports: [ProjectsComponent],
+  imports: [],
   templateUrl: './project-test.component.html',
   styleUrl: './project-test.component.scss'
 })
@@ -18,10 +18,10 @@ export class ProjectTestComponent {
   }
 
   loadNextProject() {
-    if (this.projectIndex < this.projectData.projects.length - 1) {
-      this.projectIndex++;
+    if (this.projectData.loadIndex < this.projectData.projects.length - 1) {
+      this.projectData.loadIndex++;
     } else {
-      this.projectIndex = 0;
+      this.projectData.loadIndex = 0;
     }
   }
 }
