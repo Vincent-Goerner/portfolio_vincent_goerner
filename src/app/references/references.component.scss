@@ -38,14 +38,15 @@
 
         >div {
             display: flex;
-            flex-direction: column;
-            align-items: end;
-        }
+            justify-content: end;
+            align-items: center;
 
-        >.references-line {
-            width: 100px;
-            height: 1px;
-            background-color: white;
+            >.references-line {
+                flex: 1;
+                height: 2px;
+                margin-right: 24px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
         }
     }
 }
@@ -60,6 +61,7 @@
         position: absolute;
         left: 4px;
         opacity: 0;
+        cursor: pointer;
         transition: all 125ms ease-in-out;
 
         &:hover {
@@ -71,6 +73,7 @@
         position: absolute;
         right: 4px;
         opacity: 0;
+        cursor: pointer;
         transition: all 125ms ease-in-out;
 
         &:hover {
@@ -92,9 +95,10 @@
 }
 
 .feedback-highlighted {
-    background-color: #26524B;
+    background-color: #26524B !important;
+    transform: scale(1.05) !important;
 }
 
 .references-nav-point-highlighted {
-    background-color: $green;
+    background-color: $green !important;
 }
