@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
 export class ReferencesComponent {
   references = [
     {
-      autor: 'A. Fischer - Frontend Developer',
-      feedback: 'Vincent has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
+      autor: 'M. Marrocu - Frontend Developer',
+      feedback: 'Vincent is brimming with creativity and always has clever ideas. He is very committed and finds a solution for every problem. With him in the team, things just run smoothly!',
       highlighted: false
     },
     {
@@ -26,18 +26,22 @@ export class ReferencesComponent {
       highlighted: false
     }
   ];
-  isHighlighted: number = 1;
+  isHighlighted: number = 0;
+  sliderLeft = false;
+  sliderRight = false;
+  sliderCenter = false;
 
   constructor() {
-    this.highlightFeedback();
+    this.moveSlider();
+    this.highlightFeedback();    
   }
 
   highlightFeedback() {    
-    for (let index = 0; index < this.references.length -1; index++) {
+    for (let index = 0; index < this.references.length; index++) {
       if (index == this.isHighlighted) {
-        this.references[this.isHighlighted].highlighted = true;        
+        this.references[index].highlighted = true;        
       } else {
-        this.references[this.isHighlighted].highlighted = false;
+        this.references[index].highlighted = false;
       }
     }
   }
@@ -57,7 +61,23 @@ export class ReferencesComponent {
         this.isHighlighted = 0;
       }
     }
+    this.moveSlider();
     this.highlightFeedback();
-    
+  }
+
+  moveSlider() {
+    if (this.isHighlighted == 0) {
+      this.sliderLeft = true;
+      this.sliderCenter = false;
+      this.sliderRight = false;
+    } else if (this.isHighlighted == 1) {
+      this.sliderLeft = false;
+      this.sliderCenter = true;
+      this.sliderRight = false;
+    } else if (this.isHighlighted == 2) {
+      this.sliderLeft = false;
+      this.sliderCenter = false;
+      this.sliderRight = true;
+    }
   }
 }

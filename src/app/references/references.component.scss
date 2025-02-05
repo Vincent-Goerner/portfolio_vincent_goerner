@@ -3,16 +3,18 @@
 
 .references-bg {
     background-color: $gray;
-    width: 1440px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .references {
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 150px 0;
     gap: 48px;
+    overflow-x: hidden;
 
     >h2 {
         font-family: 'fira code';
@@ -20,10 +22,24 @@
     }
 }
 
+.references-overview-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.references-gradient {
+    width: 1275px;
+    height: 250px;
+    position: absolute;
+    z-index: 1000;
+    background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 25%, rgba(28, 28, 28, 0) 75%, #1C1C1C 100%);
+}
+
 .references-overview {
     display: flex;
     gap: 48px;
-    // background-color: linear-gradient(90deg, #1C1C1C, rgba(28, 28, 28, 0), rgba(28, 28, 28, 0), #1C1C1C);
+    transition: all 125ms ease-in-out;
 
     >.references-feedback {
         display: flex;
@@ -101,4 +117,19 @@
 
 .references-nav-point-highlighted {
     background-color: $green !important;
+}
+
+.move-left {
+    transition: all 125ms ease-in-out;
+    transform: translateX(664px);
+}
+
+.move-right {
+    transition: all 125ms ease-in-out;
+    transform: translateX(-664px);
+}
+
+.move-center {
+    transition: all 125ms ease-in-out;
+    transform: translateX(0%);
 }

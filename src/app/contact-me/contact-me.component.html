@@ -1,0 +1,43 @@
+<section class="contact-me-bg section-bg">
+    <div class="contact-me">
+        <div class="description-text">
+            <div class="contact-me-headline">
+                <h2>Contact me</h2>
+                <h1>Let's work togther</h1>
+            </div>
+            <div class="contact-me-description">
+                <h2>Got a problem to solve?</h2>
+                <p>
+                    Contact me through this form, I am interested in hearing from you, knowing
+                    your ideas and contributing to your projects with my work.
+                </p>
+                <p>
+                    Need a Frontend developer? <span>Let's talk!</span>
+                </p>
+            </div>
+        </div>
+        <form class="contact-me-form">
+            <div class="contact-me-input input-name">
+                <label for="form-name">What's your name?</label>
+                <input id="form-name" placeholder="Your name goes here" type="text" required>
+            </div>
+            <div class="contact-me-input input-email">
+                <label for="form-email">What's your email?</label>
+                <input id="form-email" placeholder="youremail@email.com" type="text" required>
+            </div>
+            <div class="contact-me-input input-text">
+                <label for="form-text">How can I help you?</label>
+                <input id="form-text" placeholder="Hello Vincent, I am interested in..." type="text" required>
+            </div>
+            <div class="contact-me-form-check">
+                <div>
+                    <img class="contact-me-checkbox" (click)="toggleCheckbox()" [class.opacity-full]="this.checkbox" src="../../assets/img/contact_me/checkbox_hover.png">
+                    <img src="../../assets/img/contact_me/checkbox.png">
+                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my dara as outlined.
+                    </p>
+                </div>
+                <button class="btn">Say Hello ;)</button>
+            </div>
+        </form>
+    </div>
+</section>

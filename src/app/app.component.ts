@@ -6,11 +6,13 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ReferencesComponent } from './references/references.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ReferencesComponent],
+  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ReferencesComponent, ContactMeComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

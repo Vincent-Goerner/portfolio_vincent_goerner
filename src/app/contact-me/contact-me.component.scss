@@ -1,0 +1,133 @@
+@import '../shared/general.scss';
+@import '../shared/variables.scss';
+
+.contact-me-bg {
+    background-color: $gray;
+}
+
+.contact-me {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-text {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    >.contact-me-headline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    >.contact-me-description {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        span {
+            color: $green;
+            font-weight: 700;
+        }
+    }
+}
+
+.contact-me-form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    .contact-me-input {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        gap: 16px;
+        border-top: solid 1px #337C6F;
+        border-bottom: solid 1px #337C6F;
+    }
+
+    .input-name, .input-email, .input-text {
+        &:hover {
+            transition: all 250ms ease-in-out;
+            border-top: solid 1px $green;
+            border-bottom: solid 1px $green;
+        }
+    }
+
+    label {
+        font-family: 'fira code';
+        margin: 0;
+        font-size: 24px;
+        color: #3DCFB6;
+    }
+
+    input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        outline: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        font-family: 'karla';
+
+        &:hover {
+            .contact-me-seperator {
+                background-color: $green !important;
+            }
+        }
+    }
+}
+
+.contact-me-form-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-family: 'karla';
+    color: white;
+    font-size: 15px;
+    margin: 50px 0;
+
+    >div {
+        display: flex;
+        gap: 8px;
+        position: relative;
+
+        >input {
+            width: 18px;
+            height: 18px;
+            background-color: rgba(0, 0, 0, 0);
+            border: solid 2px $green;
+            outline: none;
+        }
+
+        a {
+            font-family: 'fira code';
+            text-decoration: none;
+            color: $green;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        >.contact-me-checkbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.opacity-full {
+    opacity: 1 !important;
+}
