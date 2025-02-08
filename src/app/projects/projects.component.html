@@ -1,4 +1,4 @@
-<section class="projects-bg section-bg">
+<section id="projects" class="projects-bg section-bg">
     <div class="projects">
         <div class="projects-headline">
             <h2>Portfolio</h2>
@@ -8,6 +8,9 @@
             <p>
                 Explore a selection of my work here - Interact with projects to see my skills in action.
             </p>
+        </div>
+        <div class="projects-preview" [class.show-preview]="showProjectDetails">
+            <app-project-test [projectIndex]="loadIndex"></app-project-test>
         </div>
         <div class="projects-overview-box">
             @for (p of projects; track p; let i = $index) {
@@ -28,6 +31,5 @@
                 </div>
             }
         </div>
-        <app-project-test [projectIndex]="loadIndex"></app-project-test>
     </div>
 </section>

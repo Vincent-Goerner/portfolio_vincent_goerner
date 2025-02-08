@@ -2,14 +2,13 @@
 
 .projects-bg {
     background-color: #1C1C1C;
-    margin: auto;
-    width: 1440px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .projects {
     display: flex;
     flex-direction: column;
+    max-width: 1440px;
     gap: 40px;
     margin-top: 100px;
 
@@ -77,4 +76,15 @@
             }
         }
     }
+}
+
+.projects-preview {
+    z-index: -1;
+    position: relative;
+    bottom: 310px;
+    left: 0px;
+}
+
+.show-preview {
+    z-index: 2;
 }

@@ -2,20 +2,16 @@
 @import '../shared/variables.scss';
 
 .above-the-fold-bg {
-    @include dFlex();
-    flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    background-image: url("../../assets/img/atf_section/background.png");
-    background-size: cover;
-    overflow: hidden;
+    background: linear-gradient(45deg, #1c1c1c 40%, #08463b);
+    overflow-x: hidden;
 }
 
 .above-the-fold-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    @include position($pos: relative);
+    position: relative;
     max-width: 1440px;
     width: 100vw;
     height: 100vh;

@@ -3,6 +3,7 @@
 
 .footer-bg {
     background-color: $gray;
+    height: fit-content;
 }
 
 .footer {
@@ -51,6 +52,58 @@
                 opacity: 0;
             }
         }
+    }
+}
 
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    font-family: 'fira code';
+    font-size: 18px;
+    color: $green;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+    >div {
+        position: relative;
+
+        >div {
+            position: absolute;
+            top: 7px;
+            left: -10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 10px;
+            background-color: $green;
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:hover {
+            >div {
+                opacity: 1;
+            }
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-family: 'karla';
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: $green;
+        }
     }
 }

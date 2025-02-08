@@ -21,12 +21,39 @@
     width: 32px;
     gap: 24px;
 
+    >.clue-scroll-box {
+        width: 30px;
+        height: 48px;
+        border-radius: 32px;
+        border: solid 1px $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        >img {
+            width: 18px;
+            height: 20px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+    }
+
     >.clue-line-green {
         width: 1px;
         height: 240px;
         background-color: $green;
     }
 }
+
+@keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(6px);
+    }
+  }
 
 .clue-contact {
     display: flex;
@@ -103,24 +130,34 @@
 }
 
 .clue-marquee {
+    width: calc(100vw + 10px);
     position: absolute;
+    left: 0;
     bottom: 45px;
-    left: -10px;
-    transform: rotate(-3deg);
-    width: 105vw;
+    right: 0;
+    overflow: hidden;
+    transform: rotate(-3deg) translateX(-10px);
     padding: 10px 0;
     font-family: 'karla';
     font-size: 32px;
     color: $green;
     background: #FFFFFF1F;
+    backdrop-filter: blur(2.5px);
 
-    >.clue-marquee-point {
-        background-color: $green;
-        width: 8px;
-        height: 8px;
-        border: solid 1px $green;
-        border-radius: 100px;
-        margin-left: 50px;
-        margin-right: 50px;
+    >div {
+        display: flex;
+        align-items: center;
+
+        >.clue-marquee-point-box {
+    
+            .clue-marquee-point {
+                width: 8px;
+                height: 8px;
+                background-color: $green;
+                border-radius: 10px;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+        }
     }
 }

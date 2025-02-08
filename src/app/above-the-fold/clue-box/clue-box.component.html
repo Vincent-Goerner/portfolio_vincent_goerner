@@ -1,16 +1,31 @@
 <div class="clue-box">
     <div class="clue-scroll">
-        <img src="../../../assets/img/atf_section/mouse.png">
+        <a class="clue-scroll-box" href="#about-me">
+            <img src="../../../assets/img/atf_section/arrow_down.png">
+        </a>
         <div class="clue-line-green"></div>
     </div>
-    <marquee [scrollAmount]="10" class="clue-marquee">
-        <span>Available for remote work</span>
-        <a class="clue-marquee-point"></a>
-        <span>Fullstack Developer</span>
-        <a class="clue-marquee-point"></a>
-        <span>Based in Dresden</span>
-        <a class="clue-marquee-point"></a>
-        <span>Open for learning</span>
+    <marquee [scrollAmount]="7" class="clue-marquee">
+        <div>
+            @for (t of [1,2,3]; track $index) {
+                <div class="clue-marquee-point-box">
+                    <div class="clue-marquee-point"></div>
+                </div>
+                <span>Available for remote work</span>
+                <div class="clue-marquee-point-box">
+                    <div class="clue-marquee-point"></div>
+                </div>
+                <span>Frontend Developer</span>
+                <div class="clue-marquee-point-box">
+                    <div class="clue-marquee-point"></div>
+                </div>
+                <span>Based in Dresden</span>
+                <div class="clue-marquee-point-box">
+                    <div class="clue-marquee-point"></div>
+                </div>
+                <span>Open for learning</span>
+            }
+        </div>
     </marquee>
     <div class="clue-contact">
         <a href="#">v.goerner&#64;web.de</a>

@@ -52,46 +52,28 @@ nav {
 
 .navbar-links-box {
     width: 300px;
-    position: relative;
     display: flex;
     align-items: center;
+    gap: 24px;
 
-    >img {
-        position: absolute;
-        transition: all 125ms ease-in-out;
-    }
+    >a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
 
-    >.navbar-about-me {
-        left: 0;
-    }
-    >.navbar-about-me-hover {
-        bottom: -21px;
-        left: 0;
-        opacity: 0;
-        &:hover {
-            opacity: 1;
+        >.navbar-links-hovered {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 125ms ease-in-out;
+            opacity: 0;
         }
-    }
-    >.navbar-skills {
-        left: 120px;
-    }
-    >.navbar-skills-hover {
-        left: 120px;
-        bottom: -21px;
-        opacity: 0;
+
         &:hover {
-            opacity: 1;
-        }
-    }
-    .navbar-projects {
-        left: 215px;
-    }
-    >.navbar-projects-hover {
-        left: 215px;
-        bottom: -21px;
-        opacity: 0;
-        &:hover {
-            opacity: 1;
+            >.navbar-links-hovered {
+                opacity: 1;
+            }
         }
     }
 }
@@ -110,4 +92,33 @@ nav {
 
 .navbar-language-slider {
     transform: translateX(100%);
+}
+
+.header-logo-box {
+    cursor: pointer;
+
+    img {
+        width: 180px;
+        height: 50px;
+    }
+
+    .header-logo-img {
+        transition: all 125ms ease-in-out;
+    }
+
+    .header-logo-hovered {
+        position: absolute;
+        opacity: 0;
+        transition: all 125ms ease-in-out;
+    }
+
+    &:hover {
+        .header-logo-hovered {
+            opacity: 1;
+        }
+
+        .header-logo-img {
+            opacity: 0;
+        }
+    }
 }

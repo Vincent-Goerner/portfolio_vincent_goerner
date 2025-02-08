@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ClueBoxComponent } from './clue-box/clue-box.component';
+import { HeaderComponent } from '../shared/header/header.component';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [NavbarComponent, ClueBoxComponent],
+  imports: [ClueBoxComponent, HeaderComponent],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
