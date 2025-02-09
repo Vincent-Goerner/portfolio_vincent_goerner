@@ -1,16 +1,31 @@
 @import '../../shared/mixin.scss';
+@import '../general.scss';
 
-nav {
-    position: absolute;
+section {
+    position: fixed;
     top: 0;
     left: 0;
-    @include dFlex($js: space-between);
-    max-width: 1440px;
-    width: 100vw;
-    height: 96px;
+    display: flex;
+    justify-content: center;
+    height: fit-content !important;
     padding: 0 96px;
     box-sizing: border-box;
+    z-index: 5;
+    transition: all 125ms ease-in-out;
+}
+
+nav {
+    @include dFlex($js: space-between);
+    height: 100px;
+    max-width: 1440px;
+    width: 1440px;
     font-family: 'fira code';
+}
+
+.nav-scroll-effect {
+    border-bottom: solid 2px $green;
+    box-shadow: 0px 1px 6px 3px rgba(0,0,0,0.9);
+    background: linear-gradient(45deg, #1c1c1c 40%, #08463b);
 }
 
 .navbar-links {

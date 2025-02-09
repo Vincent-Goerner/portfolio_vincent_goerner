@@ -1,24 +1,27 @@
 @import '../shared/mixin.scss';
-@import '../shared/variables.scss';
+@import '../shared/general.scss';
 
 .above-the-fold-bg {
-    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background: linear-gradient(45deg, #1c1c1c 40%, #08463b);
-    overflow-x: hidden;
 }
 
 .above-the-fold-content {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     max-width: 1440px;
-    width: 100vw;
+    width: 1440px;
     height: 100vh;
 }
 
 .headlines {
-    @include dFlex();
+    display: flex;
+    align-items: center;
     flex-direction: column;
 
     >h1 {
@@ -42,26 +45,68 @@
     gap: 48px;
     z-index: 2;
 
-    >marquee {
+    >a {
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: auto;
-        height: 48px;
-        border: solid 1px #FFFFFF;
-        border-radius: 100px;
-        direction: left;
-        background-color: #ffffff00;
-        color: white;
-        font-family: 'karla';
-        font-size: 18px;
-        padding-left: 24px;
-        padding-right: 24px;
-        cursor: pointer;
+        overflow-x: hidden;
+        text-decoration: none;
+
+        span {
+            transition: all 125ms ease-in-out;
+        }
 
         &:hover {
-            color: $green;
-            border: solid 1px $green;
+            span {
+                transform: translateX(-200%);
+            }
         }
+    }
+}
+
+
+
+.clue-marquee {
+    width: calc(100vw + 10px);
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transform: rotate(-3deg) translateX(-10px);
+    padding: 10px 0;
+    font-family: 'karla';
+    font-size: 32px;
+    color: $green;
+    background: #FFFFFF1F;
+    backdrop-filter: blur(2.5px);
+
+    >div {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: scrollText 80s linear infinite;
+
+        >.clue-marquee-point-box {
+            .clue-marquee-point {
+                width: 8px;
+                height: 8px;
+                background-color: $green;
+                border-radius: 10px;
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+        }
+    }
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }

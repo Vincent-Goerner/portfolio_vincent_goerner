@@ -1,14 +1,36 @@
-<section id="about-the-fold" class="section-bg above-the-fold-bg">
+<section id="about-the-fold" class="above-the-fold-bg section-bg">
     <div class="above-the-fold-content">
         <app-header class="navbar"></app-header>
         <div class="headlines">
             <h2>Frontend Developer</h2>
             <h1>Vincent Görner</h1>
             <div class="atf-shortcut">
-                <marquee (mouseover)="startMarquee('work')" (mouseout)="stopMarquee()" [scrollAmount]="marqueSpeedWork">Check my work</marquee>
-                <marquee (mouseover)="startMarquee('contact')" (mouseout)="stopMarquee()" [scrollAmount]="marqueSpeedContact">Contact me</marquee>
+                <a href="#projects" class="btn"><span>Check my work</span></a>
+                <a href="#contact-me" class="btn"><span>Contact me</span></a>
             </div>
         </div>
         <app-clue-box></app-clue-box>
+    </div>
+    <div class="clue-marquee">
+        <div>
+            @for (t of [1,2,3]; track $index) {
+            <div class="clue-marquee-point-box">
+                <div class="clue-marquee-point"></div>
+            </div>
+            <span>Available for remote work</span>
+            <div class="clue-marquee-point-box">
+                <div class="clue-marquee-point"></div>
+            </div>
+            <span>Frontend Developer</span>
+            <div class="clue-marquee-point-box">
+                <div class="clue-marquee-point"></div>
+            </div>
+            <span>Based in Dresden</span>
+            <div class="clue-marquee-point-box">
+                <div class="clue-marquee-point"></div>
+            </div>
+            <span>Open for learning</span>
+            }
+        </div>
     </div>
 </section>

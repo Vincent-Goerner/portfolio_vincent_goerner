@@ -3,13 +3,8 @@
 .skills-bg {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
     background-image: url("../../assets/img/skills/skills_bg.svg");
     background-size: cover;
-    padding: 0 96px;
-    box-sizing: border-box;
-    overflow-x: hidden;
 
     >.skills {
         display: flex;

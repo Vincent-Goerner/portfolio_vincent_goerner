@@ -2,14 +2,18 @@
 @import '../shared/variables.scss';
 
 .contact-me-bg {
+    display: flex;
+    justify-content: center;
     background-color: $gray;
     height: fit-content;
 }
 
 .contact-me {
-    margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    max-width: 1440px;
+    width: 1440px;
+    margin-top: 100px;
 }
 
 .description-text {

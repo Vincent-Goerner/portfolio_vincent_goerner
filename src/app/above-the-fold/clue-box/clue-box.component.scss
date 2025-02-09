@@ -10,7 +10,7 @@
     left: 0;
     max-width: 1440px;
     width: 100vw;
-    padding: 0 72px;
+    padding: 0 96px;
     box-sizing: border-box;
 }
 
@@ -46,14 +46,16 @@
 }
 
 @keyframes bounce {
+
     0%,
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     50% {
-      transform: translateY(6px);
+        transform: translateY(6px);
     }
-  }
+}
 
 .clue-contact {
     display: flex;
@@ -103,12 +105,12 @@
         opacity: 0;
         cursor: pointer;
         transition: all 125ms ease-in-out;
-        
+
         &:hover {
             opacity: 1;
         }
     }
-    
+
     >.clue-linkedin {
         position: absolute;
         bottom: 0;
@@ -125,39 +127,6 @@
 
         &:hover {
             opacity: 1;
-        }
-    }
-}
-
-.clue-marquee {
-    width: calc(100vw + 10px);
-    position: absolute;
-    left: 0;
-    bottom: 45px;
-    right: 0;
-    overflow: hidden;
-    transform: rotate(-3deg) translateX(-10px);
-    padding: 10px 0;
-    font-family: 'karla';
-    font-size: 32px;
-    color: $green;
-    background: #FFFFFF1F;
-    backdrop-filter: blur(2.5px);
-
-    >div {
-        display: flex;
-        align-items: center;
-
-        >.clue-marquee-point-box {
-    
-            .clue-marquee-point {
-                width: 8px;
-                height: 8px;
-                background-color: $green;
-                border-radius: 10px;
-                margin-left: 30px;
-                margin-right: 30px;
-            }
         }
     }
 }
