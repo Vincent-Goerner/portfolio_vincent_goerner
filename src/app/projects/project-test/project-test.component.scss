@@ -65,9 +65,10 @@
         display: flex;
         gap: 32px;
 
-        >button {
+        >a {
             display: flex;
             align-items: center;
+            text-decoration: none;
             gap: 6px;
             cursor: pointer;
 
@@ -91,6 +92,10 @@
     gap: 40px;
     width: 520px;
 
+    .project-preview {
+        width: 520px;
+        height: 370px;
+    }
 
     >.project-close {
         position: relative;

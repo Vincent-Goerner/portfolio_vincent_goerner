@@ -2,20 +2,23 @@
 @import '../shared/general.scss';
 
 .above-the-fold-bg {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     background: linear-gradient(45deg, #1c1c1c 40%, #08463b);
+    padding: 0 96px;
+    box-sizing: border-box;
 }
 
 .above-the-fold-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     max-width: 1440px;
-    width: 1440px;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -86,7 +89,7 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
-        animation: scrollText 80s linear infinite;
+        animation: scrollText 300s linear infinite;
 
         >.clue-marquee-point-box {
             .clue-marquee-point {

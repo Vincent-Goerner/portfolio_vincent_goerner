@@ -1,17 +1,15 @@
 @import '../../shared/mixin.scss';
 @import '../../shared/variables.scss';
 
-.clue-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+.clue-content {
     position: absolute;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
     max-width: 1440px;
     width: 100vw;
-    padding: 0 96px;
-    box-sizing: border-box;
 }
 
 .clue-scroll {
@@ -66,7 +64,7 @@
 
     >a {
         transform: rotate(-90deg);
-        margin-bottom: 70px;
+        margin-bottom: 90px;
         text-decoration: none;
         color: white;
         font-family: 'karla';
@@ -91,17 +89,20 @@
     flex-direction: column;
     align-items: center;
     height: 80px;
+    gap: 8px;
 
-    >.clue-github {
-        position: absolute;
-        top: 0;
+    a {
+        position: relative;
+    }
+
+    .clue-github {
         cursor: pointer;
     }
 
-    >.clue-github-hover {
+    .clue-github-hover {
         position: absolute;
         top: 0;
-        right: -28px;
+        left: 0;
         opacity: 0;
         cursor: pointer;
         transition: all 125ms ease-in-out;
@@ -111,16 +112,14 @@
         }
     }
 
-    >.clue-linkedin {
-        position: absolute;
-        bottom: 0;
+    .clue-linkedin {
         cursor: pointer;
     }
 
-    >.clue-linkedin-hover {
+    .clue-linkedin-hover {
         position: absolute;
-        bottom: 0;
-        right: -28px;
+        top: 0;
+        left: 0;
         opacity: 0;
         cursor: pointer;
         transition: all 125ms ease-in-out;
