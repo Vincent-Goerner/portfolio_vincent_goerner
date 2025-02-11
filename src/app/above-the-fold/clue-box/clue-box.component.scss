@@ -69,6 +69,7 @@
         color: white;
         font-family: 'karla';
         transition: all 125ms ease-in-out;
+        cursor: pointer;
 
         &:hover {
             color: $green;

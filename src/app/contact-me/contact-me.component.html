@@ -16,27 +16,34 @@
                 </p>
             </div>
         </div>
-        <form class="contact-me-form">
+        <form class="contact-me-form" action="https://formspree.io/f/xvgzbaob" method="POST">
             <div class="contact-me-input input-name">
-                <label for="form-name">What's your name?</label>
-                <input id="form-name" placeholder="Your name goes here" type="text" required>
+                <label for="form-name">
+                    What's your name?
+                    <input id="form-name" placeholder="Your name goes here" type="text" name="name" required>
+                </label>
             </div>
             <div class="contact-me-input input-email">
-                <label for="form-email">What's your email?</label>
-                <input id="form-email" placeholder="youremail@email.com" type="text" required>
+                <label for="form-email">
+                    What's your email?
+                    <input id="form-email" placeholder="youremail@email.com" type="email" name="email" required>
+                </label>
             </div>
             <div class="contact-me-input input-text">
-                <label for="form-text">How can I help you?</label>
-                <input id="form-text" placeholder="Hello Vincent, I am interested in..." type="text" required>
+                <label for="form-text">
+                    How can I help you?
+                    <input id="form-text" placeholder="Hello Vincent, I am interested in..." type="text" name="text" required>
+                </label>
             </div>
             <div class="contact-me-form-check">
                 <div>
-                    <img class="contact-me-checkbox" (click)="toggleCheckbox()" [class.opacity-full]="this.checkbox" src="../../assets/img/contact_me/checkbox_hover.png">
+                    <img class="contact-me-checkbox" (click)="toggleCheckbox()" [class.opacity-full]="this.checkbox"
+                        src="../../assets/img/contact_me/checkbox_hover.png">
                     <img src="../../assets/img/contact_me/checkbox.png">
                     <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my dara as outlined.
                     </p>
                 </div>
-                <button class="btn">Say Hello ;)</button>
+                <button type="submit" class="btn">Say Hello ;)</button>
             </div>
         </form>
     </div>
