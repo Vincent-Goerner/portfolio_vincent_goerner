@@ -16,23 +16,26 @@
                 </p>
             </div>
         </div>
-        <form class="contact-me-form" action="https://formspree.io/f/xvgzbaob" method="POST">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-me-form">
             <div class="contact-me-input input-name">
                 <label for="form-name">
                     What's your name?
-                    <input id="form-name" placeholder="Your name goes here" type="text" name="name" required>
+                    <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" placeholder="Your name goes here" type="text" name="name" required>
                 </label>
             </div>
             <div class="contact-me-input input-email">
                 <label for="form-email">
                     What's your email?
-                    <input id="form-email" placeholder="youremail@email.com" type="email" name="email" required>
+                    <input #email="ngModel" [(ngModel)]="contactData.email" minlength="10" placeholder="youremail@email.com" type="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 </label>
             </div>
             <div class="contact-me-input input-text">
                 <label for="form-text">
                     How can I help you?
-                    <input id="form-text" placeholder="Hello Vincent, I am interested in..." type="text" name="text" required>
+                    <input #message="ngModel" minlength="10" [(ngModel)]="contactData.message" placeholder="Hello Vincent, I am interested in..." type="text" name="text" required>
+                    @if (!message.valid && message.touched) {
+                        <span>Please enter a message</span>
+                    }
                 </label>
             </div>
             <div class="contact-me-form-check">
