@@ -5,7 +5,11 @@
     height: 100vh;
     padding: 0 96px;
     box-sizing: border-box;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
+}
+
+.opacity-full {
+    opacity: 1 !important;
 }
 
 .btn {

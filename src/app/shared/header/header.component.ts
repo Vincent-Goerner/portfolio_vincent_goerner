@@ -11,6 +11,7 @@ export class HeaderComponent {
   changeLanguage: Boolean = false;
   language: string = this.switchLanguage();
   isScrolled = false;
+  showMenu = false;
 
   constructor() {
     setInterval(() => {
@@ -29,5 +30,9 @@ export class HeaderComponent {
     } else {
       this.isScrolled = false;
     }
+  }
+
+  showMobileMenu() {
+    this.showMenu = !this.showMenu;
   }
 }

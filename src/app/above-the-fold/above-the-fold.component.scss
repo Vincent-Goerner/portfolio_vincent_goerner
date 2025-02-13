@@ -2,8 +2,6 @@
 @import '../shared/general.scss';
 
 .above-the-fold-bg {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     background: linear-gradient(45deg, #1c1c1c 40%, #08463b);
@@ -12,14 +10,13 @@
 }
 
 .above-the-fold-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     max-width: 1440px;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .headlines {
@@ -53,20 +50,44 @@
         align-items: center;
         overflow-x: hidden;
         text-decoration: none;
+        cursor: pointer;
 
         span {
+            cursor: pointer;
             transition: all 125ms ease-in-out;
         }
 
         &:hover {
             span {
-                transform: translateX(-200%);
+                animation: moveText 3s linear infinite;
             }
         }
     }
 }
 
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
 
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .clue-marquee {
     width: calc(100vw + 10px);
@@ -111,5 +132,171 @@
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+.clue-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.clue-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    gap: 24px;
+
+    >.clue-scroll-box {
+        width: 30px;
+        height: 48px;
+        border-radius: 32px;
+        border: solid 1px $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        >img {
+            width: 18px;
+            height: 20px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+    }
+
+    >.clue-line-green {
+        width: 1px;
+        height: 240px;
+        background-color: $green;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+.clue-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    gap: 16px;
+
+    >a {
+        transform: rotate(-90deg);
+        margin-bottom: 90px;
+        text-decoration: none;
+        color: white;
+        font-family: 'karla';
+        transition: all 125ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    >.clue-line-white {
+        width: 1px;
+        height: 180px;
+        background-color: white;
+        margin-top: 16px;
+    }
+}
+
+.clue-img-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+    gap: 8px;
+
+    a {
+        position: relative;
+    }
+
+    .clue-github {
+        cursor: pointer;
+    }
+
+    .clue-github-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .clue-linkedin {
+        cursor: pointer;
+    }
+
+    .clue-linkedin-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+/* media compatibility */
+
+@media (max-width: 1200px) {
+
+    .headlines {
+        h1 {
+            font-size: 96px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .above-the-fold-bg {
+        padding: 0 48px;
+    }
+
+    .headlines {
+        h1 {
+            font-size: 80px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .clue-contact {
+        >a {
+            display: none;
+        }
     }
 }
