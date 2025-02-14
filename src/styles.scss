@@ -1,7 +1,25 @@
-* {
+body {
   margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   cursor: url("./assets/img/cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1c1c1c;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /* fira-code-300 - latin */

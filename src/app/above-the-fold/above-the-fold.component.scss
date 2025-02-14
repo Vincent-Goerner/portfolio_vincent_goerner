@@ -5,8 +5,8 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(45deg, #1c1c1c 40%, #08463b);
-    padding: 0 96px;
     box-sizing: border-box;
+    padding: 0 96px;
 }
 
 .above-the-fold-content {
@@ -165,6 +165,7 @@
         >img {
             width: 18px;
             height: 20px;
+            cursor: pointer;
             animation: bounce 1s ease-in-out infinite;
         }
     }
@@ -195,7 +196,7 @@
     width: 32px;
     gap: 16px;
 
-    >a {
+    .clue-mail {
         transform: rotate(-90deg);
         margin-bottom: 90px;
         text-decoration: none;
@@ -224,6 +225,22 @@
     align-items: center;
     height: 80px;
     gap: 8px;
+
+    >.clue-mobile-mail {
+        display: none;
+        position: relative;
+
+        >.clue-mobile-mail-hover {
+            position: absolute;
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 
     a {
         position: relative;
@@ -269,6 +286,13 @@
 
 @media (max-width: 1200px) {
 
+    .above-the-fold-bg {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+
     .headlines {
         h1 {
             font-size: 96px;
@@ -295,8 +319,78 @@
     }
 
     .clue-contact {
-        >a {
+        .clue-mail {
             display: none;
+        }
+
+        .clue-mobile-mail {
+            display: flex;
+        }
+
+        .clue-img-box {
+            height: fit-content;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+
+    .above-the-fold-bg {
+        padding: 0 16px;
+    }
+
+    .headlines {
+        h1 {
+            font-size: 62px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .btn {
+        height: 40px;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .above-the-fold-bg {
+        padding: 0 16px;
+    }
+
+    .headlines {
+        h1 {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }
+
+    .btn {
+        height: 36px;
+        padding: 0 4px;
+        font-size: 16px;
+    }
+
+    .clue-scroll {
+        gap: 16px;
+
+        >.clue-line-green {
+            width: 1px;
+            height: 180px;
+            background-color: $green;
+        }
+    }
+
+    .clue-contact {
+        gap: 8px;
+
+        >.clue-line-white {
+            height: 115px;
         }
     }
 }

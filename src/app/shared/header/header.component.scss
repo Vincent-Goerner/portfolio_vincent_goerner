@@ -149,27 +149,27 @@ nav {
     display: none;
 
     img {
-        width: 180px;
+        width: 75px;
         height: 50px;
         cursor: pointer;
     }
 
-    .header-logo-img {
+    .header-mobile-logo-img {
         transition: all 125ms ease-in-out;
     }
 
-    .header-logo-hovered {
+    .header-mobile-logo-hovered {
         position: absolute;
         opacity: 0;
         transition: all 125ms ease-in-out;
     }
 
     &:hover {
-        .header-logo-hovered {
+        .header-mobile-logo-hovered {
             opacity: 1;
         }
 
-        .header-logo-img {
+        .header-mobile-logo-img {
             opacity: 0;
         }
     }
