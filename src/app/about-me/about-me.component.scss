@@ -18,12 +18,16 @@
 
 .about-me-img {
     position: relative;
+    width: 570px;
+    height: 600px;
+    transition: all 125ms ease-in-out;
 
     >.about-me-profile-img-bg {
         position: absolute;
         top: 30px;
         left: -30px;
         z-index: 0;
+        transition: all 125ms ease-in-out;
     }
 
     >.about-me-profile-img {
@@ -31,6 +35,7 @@
         top: 0;
         left: 0;
         z-index: 1;
+        transition: all 125ms ease-in-out;
     }
 }
 
@@ -43,6 +48,7 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        transition: all 125ms ease-in-out;
 
         p {
             margin: 0;
@@ -70,5 +76,92 @@
 /* media compatibility */
 
 @media (max-width: 1350px) {
-    
+
+    .about-me-bg {
+        height: fit-content !important;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description-box {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .about-me-img {
+        width: 360px;
+        height: 390px;
+
+        img {
+            width: 360px;
+            height: 390px;
+        }
+
+        .about-me-profile-img-bg {
+            top: 15px;
+            left: -15px;
+        }
+    }
+
+    .about-me-description {
+        width: 360px;
+
+        h3 {
+            font-size: 18px;
+        }
+
+        .about-me-text {
+            gap: 24px;
+
+            h1 {
+                font-size: 56px;
+            }
+
+            .description-text {
+                font-size: 16px;
+            }
+        }
+
+        .description-details {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+
+    .about-me-img {
+        width: 270px;
+        height: 290px;
+
+        img {
+            width: 270px;
+            height: 290px;
+        }
+
+        .about-me-profile-img-bg {
+            top: 8px;
+            left: -8px;
+        }
+    }
+
+    .about-me-description {
+        width: 280px;
+
+        .about-me-text {
+            gap: 16px;
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
 }

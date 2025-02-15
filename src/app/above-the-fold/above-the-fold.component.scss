@@ -44,49 +44,6 @@
     height: 48px;
     gap: 48px;
     z-index: 2;
-
-    >a {
-        display: flex;
-        align-items: center;
-        overflow-x: hidden;
-        text-decoration: none;
-        cursor: pointer;
-
-        span {
-            cursor: pointer;
-            transition: all 125ms ease-in-out;
-        }
-
-        &:hover {
-            span {
-                animation: moveText 3s linear infinite;
-            }
-        }
-    }
-}
-
-@keyframes moveText {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateX(-150%);
-        opacity: 0;
-    }
-
-    75% {
-        transform: translateX(150%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 .clue-marquee {
@@ -178,8 +135,6 @@
 }
 
 @keyframes bounce {
-
-    0%,
     100% {
         transform: translateY(0);
     }
@@ -355,10 +310,6 @@
 }
 
 @media (max-width: 500px) {
-
-    .above-the-fold-bg {
-        padding: 0 16px;
-    }
 
     .headlines {
         h1 {

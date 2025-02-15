@@ -17,6 +17,11 @@
 }
 
 .description-text-box {
+
+    p {
+        margin: 0;
+    }
+
     >div {
         display: flex;
         gap: 8px;
@@ -26,7 +31,7 @@
         }
 
         >.skills-h2 {
-            color: $green;
+            color: white;
         }
     }
 
@@ -39,7 +44,7 @@
         span {
             transition: all 125ms ease-in-out;
         }
-    
+
         &:hover {
             span {
                 transform: translateX(-200%);
@@ -61,7 +66,7 @@
         align-items: center;
         flex-direction: column;
         width: 100px;
-        height: 100px;
+        height: 110px;
         font-family: 'fira code';
         font-size: 18px;
         color: white;
@@ -97,9 +102,126 @@
         &:hover {
             cursor: pointer;
             color: $green;
-        
+
             >.skills-intrests {
                 opacity: 1;
+            }
+        }
+    }
+}
+
+/* media compatibility */
+
+@media (max-width: 1400px) {
+
+    .section-bg {
+        height: fit-content;
+    }
+
+    .description-box {
+        margin-top: 0;
+    }
+
+    .skills-bg {
+        >.skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .skills-technologies-overview {
+        margin-top: 50px;
+
+        .growth-mindset {    
+            .skills-intrests {
+                bottom: 110px;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+
+    .description-box {
+        width: 360px;
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .btn {
+            font-size: 16px;
+        }
+
+        .description-text-box {
+            gap: 24px;
+            font-size: 16px;
+
+            h1 {
+                font-size: 56px;
+            }
+        }
+    }
+
+    .skills-technologies-overview {
+        width: 360px;
+        height: fit-content;
+        gap: 24px;
+
+        .skills-technologie {
+            font-size: 16px;
+        }
+
+        .growth-mindset {    
+            .skills-intrests {
+                bottom: 110px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .description-box {
+        width: 280px;
+        padding: 24px;
+
+        h2 {
+            font-size: 15px;
+        }
+
+        .description-text-box {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .skills-technologies-overview {
+        width: 280px;
+        height: fit-content;
+        gap: 16px;
+        margin-top: 20px;
+
+        .skills-technologie {
+            font-size: 16px;
+            width: 80px;
+            height: 100px;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .growth-mindset {    
+            .skills-intrests {
+                left: -12px;
+                bottom: 100px;
             }
         }
     }
