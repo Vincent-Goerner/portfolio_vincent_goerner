@@ -4,7 +4,7 @@
     background-color: #1C1C1C;
     display: flex;
     justify-content: center;
-    max-height: 1440px;
+    height: fit-content;
 }
 
 .projects {
@@ -13,16 +13,22 @@
     max-width: 1440px;
     width: 1440px;
     gap: 40px;
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 
-    >.projects-headline {
+    .projects-description {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-    }
-
-    >.description-text {
-        width: 450px;
+        gap: 41px;
+        >.projects-headline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        >.description-text {
+            width: 450px;
+        }
     }
 }
 
@@ -38,6 +44,7 @@
         padding: 40px 32px;
         position: relative;
         transition: all 125ms ease-in-out;
+        text-decoration: none;
         cursor: pointer;
 
         img {
@@ -51,7 +58,12 @@
             gap: 4px;
         }
 
-        >.description-text {
+        >.description-technologies {
+            font-family: 'karla';
+            font-size: 18px;
+            color: white;
+            transition: all 125ms ease-in-out;
+
             >span {
                 color: $green;
             }
@@ -86,8 +98,167 @@
     position: relative;
     bottom: 310px;
     left: 0px;
+    transition: all 125ms ease-in-out;
 }
 
 .show-preview {
     z-index: 2;
+}
+
+/* media compatibilty */
+
+@media (max-width: 1400px) {
+
+    .projects-overview-box {
+
+        >.projects-overview {
+            >.projects-title-img {
+                right: -340px;
+            }
+
+            >.projects-img-bg {
+                right: -355px;
+            }
+        }
+    }
+
+    .projects-preview {
+        left: -30px;
+    }
+}
+
+@media (max-width: 1350px) {
+
+    .projects {
+        align-items: center;
+    }
+
+    .projects-overview-box {
+        width: 600px;
+
+        >.projects-overview {
+            padding: 40px 24px;
+
+            .description-text {
+                margin-right: 0;
+            }
+
+            >.projects-title-img {
+                display: none;
+            }
+
+            >.projects-img-bg {
+                display: none;
+            }
+        }
+    }
+
+    .projects-preview {
+        left: -310px;
+        bottom: 300px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .projects {
+        gap: 24px;
+
+        .projects-headline {
+            h2 {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 56px;
+            }
+        }
+
+        .projects-description {
+            width: 360px;
+            gap: 16px;
+
+            .description-text {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .projects-overview-box {
+        width: 360px;
+
+        >.projects-overview {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding: 24px 24px;
+            gap: 16px;
+
+            .description-text {
+                margin-right: 0;
+            }
+
+            >.projects-title-img {
+                display: none;
+            }
+
+            >.projects-img-bg {
+                display: none;
+            }
+        }
+    }
+
+    .projects-preview {
+        left: -180px;
+        bottom: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .projects {
+        gap: 16px;
+
+        .projects-headline {
+            h2 {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .projects-description {
+            width: 300px;
+            gap: 8px;
+        }
+    }
+
+    .projects-overview-box {
+        width: 290px;
+
+        >.projects-overview {
+            padding: 16px;
+            gap: 8px;
+
+            .description-text {
+                margin-right: 0;
+            }
+
+            >.projects-title-img {
+                display: none;
+            }
+
+            >.projects-img-bg {
+                display: none;
+            }
+        }
+    }
+
+    .projects-preview {
+        left: -155px;
+        bottom: 270px;
+    }
 }

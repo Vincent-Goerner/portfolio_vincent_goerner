@@ -1,24 +1,26 @@
 <section id="projects" class="projects-bg section-bg">
     <div class="projects">
-        <div class="projects-headline">
-            <h2>Portfolio</h2>
-            <h1>Featured Projects</h1>
-        </div>
-        <div class="description-text">
-            <p>
-                Explore a selection of my work here - Interact with projects to see my skills in action.
-            </p>
+        <div class="projects-description">
+            <div class="projects-headline">
+                <h2>Portfolio</h2>
+                <h1>Featured Projects</h1>
+            </div>
+            <div class="description-text">
+                <p>
+                    Explore a selection of my work here - Interact with projects to see my skills in action.
+                </p>
+            </div>
         </div>
         <div class="projects-preview" [class.show-preview]="showProjectDetails">
             <app-project-test [projectIndex]="loadIndex"></app-project-test>
         </div>
         <div class="projects-overview-box">
             @for (p of projects; track p; let i = $index) {
-                <div class="projects-overview" (click)="setProjectData(i)">
+                <a href="#project-test" class="projects-overview" (click)="setProjectData(i)">
                     <div class="projects-title">
                         <h3>{{ p.name }}</h3> <img src="../../assets/img/projects/arrow.png">
                     </div>
-                    <div class="description-text">
+                    <div class="description-technologies">
                     @for (t of p.technologies; track t; let l = $index) {
                             @if (l > 0) {
                                 <span>|</span>
@@ -28,7 +30,7 @@
                     </div>
                     <img class="projects-img-bg" src="../../assets/img/projects/img_bg.png">
                     <img class="projects-title-img" src="{{ p.img }}">
-                </div>
+                </a>
             }
         </div>
     </div>

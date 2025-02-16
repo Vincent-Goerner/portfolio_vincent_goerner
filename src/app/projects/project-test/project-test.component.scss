@@ -4,6 +4,7 @@
 .project-test {
     position: absolute;
     top: 50px;
+    left: 0;
     width: 1250px;
     display: flex;
     justify-content: space-between;
@@ -16,6 +17,7 @@
     opacity: 0;
     transform: translateX(150%);
     transition: all 125ms ease-in-out;
+    gap: 24px;
 }
 
 .project-description {
@@ -149,4 +151,106 @@
 .show-details {
     opacity: 1;
     transform: translateX(0%);
+}
+
+@media (max-width: 1350px) {
+
+    .project-test {
+        display: flex;
+        flex-direction: column-reverse;
+        width: fit-content;
+        padding: 40px;
+    }
+
+    .project-description {
+        gap: 24px;
+        margin-bottom: 50px;
+
+        >.project-title {    
+            >span {
+                font-size: 80px;
+            }
+    
+            >h1 {
+                font-size: 56px;
+            }
+        }
+    }
+
+    .project-example {
+        .project-preview {
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .project-test {
+        width: 360px;
+        padding: 24px;
+    }
+
+    .project-description {
+        width: 100%;
+        gap: 24px;
+        margin-bottom: 50px;
+
+        >.project-title {    
+            >span {
+                font-size: 64px;
+            }
+    
+            >h1 {
+                font-size: 40px;
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        >.project-tech-list {
+            flex-wrap: wrap;
+    
+            >div {
+                display: flex;
+                gap: 6px;
+            }
+        }
+    }
+
+    .project-example {
+        width: 100%;
+        gap: 16px;
+
+        .project-preview {
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .project-test {
+        width: 300px;
+        padding: 16px;
+    }
+
+    .project-description {
+        gap: 24px;
+    }
 }
