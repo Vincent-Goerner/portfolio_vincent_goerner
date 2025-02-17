@@ -16,7 +16,7 @@
         </div>
         <div class="projects-overview-box">
             @for (p of projects; track p; let i = $index) {
-                <a href="#project-test" class="projects-overview" (click)="setProjectData(i)">
+                <a class="projects-overview" (click)="setProjectData(i)">
                     <div class="projects-title">
                         <h3>{{ p.name }}</h3> <img src="../../assets/img/projects/arrow.png">
                     </div>

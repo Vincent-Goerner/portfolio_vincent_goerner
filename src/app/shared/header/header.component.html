@@ -35,7 +35,7 @@
                 <img class="header-mobile-menu-hover" src="./assets/img/header/mobile_menu_hover.png" alt="mobile-menu-hover">
                 <img src="./assets/img/header/mobile_menu.png" alt="mobile-menu">
             </div>  
-            <div class="header-mobile-links" [class.opacity-full]="showMenu">
+            <div class="header-mobile-links" [class.show]="showMenu">
                 <div class="navbar-language-box">
                     <div class="navbar-language-switch" [class.navbar-language-slider]="!changeLanguage">{{ language }}</div>
                     <button (click)="switchLanguage()" class="navbar-en-btn">EN</button>

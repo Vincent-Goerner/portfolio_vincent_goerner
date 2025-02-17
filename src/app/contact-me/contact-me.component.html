@@ -19,20 +19,20 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-me-form">
             <div class="contact-me-input input-name">
                 <label for="form-name">
-                    What's your name?
+                    <span>What's your name?</span> 
                     <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" placeholder="Your name goes here" type="text" name="name" required>
                 </label>
             </div>
             <div class="contact-me-input input-email">
                 <label for="form-email">
-                    What's your email?
+                    <span>What's your email?</span> 
                     <input #email="ngModel" [(ngModel)]="contactData.email" minlength="10" placeholder="youremail@email.com" type="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 </label>
             </div>
             <div class="contact-me-input input-text">
                 <label for="form-text">
-                    How can I help you?
-                    <input #message="ngModel" minlength="10" [(ngModel)]="contactData.message" placeholder="Hello Vincent, I am interested in..." type="text" name="text" required>
+                    <span>How can I help you?</span> 
+                    <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" placeholder="Hello Vincent, I am interested in..." type="text" name="text" required></textarea>
                     @if (!message.valid && message.touched) {
                         <span>Please enter a message</span>
                     }
@@ -40,11 +40,10 @@
             </div>
             <div class="contact-me-form-check">
                 <div>
-                    <img class="contact-me-checkbox" (click)="toggleCheckbox()" [class.opacity-full]="this.checkbox"
+                    <img class="contact-me-checkbox" (click)="toggleCheckbox()" [class.opacity-full]="this.contactData.checkbox"
                         src="../../assets/img/contact_me/checkbox_hover.png">
-                    <img src="../../assets/img/contact_me/checkbox.png">
-                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my dara as outlined.
-                    </p>
+                    <img class="contact-me-unchecked-box" src="../../assets/img/contact_me/checkbox.png">
+                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my dara as outlined.</p>
                 </div>
                 <button type="submit" class="btn">Say Hello ;)</button>
             </div>

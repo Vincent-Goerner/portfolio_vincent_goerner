@@ -11,11 +11,11 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactMeComponent {
   http = inject(HttpClient);
-  checkbox = false;
   contactData = {
     name: "",
     email: "",
     message: "",
+    checkbox: false,
   }
   mailTest = true;
 
@@ -31,7 +31,7 @@ export class ContactMeComponent {
   };
 
   onSubmit(ngForm: NgForm) { // wenn das Project lokal gehostet wird kommt ein Fehler und das MUSS so sein
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest || ngForm.submitted && ngForm.form.valid && !this.contactData.checkbox) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -50,6 +50,6 @@ export class ContactMeComponent {
   }
 
   toggleCheckbox() {
-    this.checkbox = !this.checkbox;
+    this.contactData.checkbox = !this.contactData.checkbox;
   }
 }

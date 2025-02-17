@@ -69,7 +69,7 @@
         color: #3DCFB6;
     }
 
-    input {
+    input, textarea {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -104,12 +104,8 @@
         gap: 8px;
         position: relative;
 
-        >input {
-            width: 18px;
-            height: 18px;
-            background-color: rgba(0, 0, 0, 0);
-            border: solid 2px $green;
-            outline: none;
+        p {
+            margin: 0;
         }
 
         a {
@@ -129,10 +125,107 @@
             left: 0;
             opacity: 0;
             cursor: pointer;
+            transition: all 125ms ease-in-out;
+        }
+
+        .contact-me-unchecked-box {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
         }
     }
 }
 
 .opacity-full {
     opacity: 1 !important;
+}
+
+/* media compatibility */
+
+@media (max-width: 1400px) {
+
+    .contact-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .description-text {
+        width: 360px;
+
+        .contact-me-headline {
+            h2 {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 56px;
+            }
+        }
+
+        .contact-me-description {
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .contact-me-form {
+        width: 360px;
+        display: flex;
+        justify-content: start;
+
+        .contact-me-input {
+            padding: 32px 16px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+
+    .description-text {
+        width: 300px;
+
+        .contact-me-headline {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .contact-me-form {
+        width: 290px;
+
+        .contact-me-input {
+            padding: 16px 16px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            gap: 10px;
+        }
+
+        input, textarea {
+            font-size: 16px;
+        }
+    }
 }

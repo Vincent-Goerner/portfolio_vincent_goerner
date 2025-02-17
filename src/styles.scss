@@ -1,8 +1,11 @@
+*{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   cursor: url("./assets/img/cursor.png"), auto;
 }
 

@@ -5,7 +5,6 @@
     justify-content: center;
     background-image: url("../../assets/img/skills/skills_bg.svg");
     background-size: cover;
-    padding-bottom: 50px;
 
     >.skills {
         display: flex;
@@ -94,7 +93,7 @@
             height: 135px;
             position: absolute;
             left: -3px;
-            bottom: 100px;
+            bottom: 110px;
             opacity: 0;
             transition: all 125ms ease-in-out;
         }
@@ -127,6 +126,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 150px;
         }
     }
 
@@ -141,7 +141,7 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     .description-box {
         width: 360px;
