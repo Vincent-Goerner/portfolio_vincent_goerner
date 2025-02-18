@@ -70,27 +70,32 @@ nav {
 }
 
 .navbar-links-box {
-    width: 300px;
+    width: 350px;
     display: flex;
     align-items: center;
     gap: 24px;
 
     >a {
+        width: 100px;
         position: relative;
         display: flex;
         justify-content: center;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        transition: all 125ms ease-in-out;
 
-        >.navbar-links-hovered {
+        img {
             position: absolute;
-            top: 0;
-            left: 0;
-            transition: all 125ms ease-in-out;
+            bottom: -8px;
             opacity: 0;
-            cursor: pointer;
+            transition: all 125ms ease-in-out;
         }
 
         &:hover {
-            >.navbar-links-hovered {
+            color: $green;
+
+            img {
                 opacity: 1;
             }
         }
@@ -245,21 +250,26 @@ nav {
     }
 
     >a {
+        width: 100px;
         position: relative;
         display: flex;
         justify-content: center;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        transition: all 125ms ease-in-out;
 
-        >.navbar-links-hovered {
+        img {
             position: absolute;
-            top: 0;
-            left: 0;
-            transition: all 125ms ease-in-out;
+            bottom: -8px;
             opacity: 0;
-            cursor: pointer;
+            transition: all 125ms ease-in-out;
         }
 
         &:hover {
-            >.navbar-links-hovered {
+            color: $green;
+
+            img {
                 opacity: 1;
             }
         }

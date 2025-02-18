@@ -88,19 +88,35 @@
     >.growth-mindset {
         position: relative;
 
-        >.skills-intrests {
+        .skills-intrests {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 195px;
             height: 135px;
             position: absolute;
-            left: -3px;
-            bottom: 110px;
+            left: -13px;
+            bottom: 105px;
+            background-image: url('../../assets/img/skills/intrests_box.png');
+            background-size: cover;
+            padding: 8px;
             opacity: 0;
+            color: $green;
+            font-size: 16px;
+            gap: 16px;
             transition: all 125ms ease-in-out;
+
+            img {
+                width: 85px;
+                height: auto;
+            }
         }
 
+
         &:hover {
-            cursor: pointer;
-            color: $green;
+            >span {
+                color: $green;
+            }
 
             >.skills-intrests {
                 opacity: 1;
@@ -133,7 +149,7 @@
     .skills-technologies-overview {
         margin-top: 50px;
 
-        .growth-mindset {    
+        .growth-mindset {
             .skills-intrests {
                 bottom: 110px;
             }
@@ -177,7 +193,7 @@
             font-size: 16px;
         }
 
-        .growth-mindset {    
+        .growth-mindset {
             .skills-intrests {
                 bottom: 110px;
             }
@@ -218,10 +234,10 @@
             height: 32px;
         }
 
-        .growth-mindset {    
+        .growth-mindset {
             .skills-intrests {
-                left: -12px;
-                bottom: 100px;
+                left: -23px;
+                bottom: 95px;
             }
         }
     }

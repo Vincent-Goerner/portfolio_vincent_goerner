@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -11,6 +12,6 @@ import { HeaderComponent } from '../shared/header/header.component';
 
 export class AboveTheFoldComponent {
 
-  constructor() {
+  constructor(private translation: TranslationService) {
   }
 }

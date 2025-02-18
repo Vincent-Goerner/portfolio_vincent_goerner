@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -8,20 +9,22 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
   changeLanguage: Boolean = false;
-  language: string = this.switchLanguage();
+  language = this.switchLanguage();
   isScrolled = false;
   showMenu = false;
+  translatedData = inject(TranslationService);
 
   constructor() {
     setInterval(() => {
       this.onWindowScrolled();
-    }, 100);    
+    }, 100);
   }
 
   switchLanguage() {
     this.changeLanguage = !this.changeLanguage;
-    return this.language = (this.changeLanguage) ? 'EN' : 'DE';
+    return (this.changeLanguage) ? 'EN' : 'DE';
   }
 
   onWindowScrolled() {

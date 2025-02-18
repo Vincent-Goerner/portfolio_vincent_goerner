@@ -18,7 +18,8 @@ export class ProjectsComponent {
       img: '../../assets/img/projects/join.png',
       preview: '../../assets/img/projects/join_preview.png',
       link: 'https://github.com/A1exi0sD4rc/Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
+      descriptionEN: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionDE: ''
     },
     {
       name: 'The Leagacy of the Living',
@@ -27,7 +28,8 @@ export class ProjectsComponent {
       img: '../../assets/img/projects/el_polo_loco.png',
       preview: '../../assets/img/projects/el_polo_loco_preview.png',
       link: 'https://github.com/A1exi0sD4rc/The-Legacy-of-the-Living',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
+      descriptionEN: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      descriptionDE: ''
     },
     {
       name: 'DaBubble',
@@ -36,7 +38,8 @@ export class ProjectsComponent {
       img: '../../assets/img/projects/coming_soon.jpg',
       preview: '../../assets/img/projects/coming_soon.jpg',
       link: 'https://github.com/A1exi0sD4rc/The-Legacy-of-the-Living',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
+      descriptionEN: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      descriptionDE: ''
     },
   ];
   technologieImg = [
