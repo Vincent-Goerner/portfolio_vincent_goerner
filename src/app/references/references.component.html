@@ -1,13 +1,15 @@
 <section id="references" class="references-bg section-bg">
     <div class="references">
-        <h2>What my colleagues say about me</h2>
+        <h2>{{ this.setPath().REFERENCES.H2 }}</h2>
         <div class="references-overview-box">
             <div class="references-gradient"></div>
             <div class="references-overview" [class.move-left]="this.sliderLeft" [class.move-right]="this.sliderRight"
             [class.move-center]="this.sliderCenter">
                 @for (r of references; track r; let i = $index) {
                 <div class="references-feedback description-text">
-                    <p>{{ r.feedback }}</p>
+                    <p>
+                        {{ r.feedback }}
+                    </p>
                     <div>
                         <div class="references-line"></div><span>{{ r.autor }}</span>
                     </div>
@@ -16,7 +18,9 @@
                 @for (r of references; track r; let i = $index) {
                 <div [class.feedback-highlighted]="references[i].highlighted"
                     class="references-feedback description-text">
-                    <p>{{ r.feedback }}</p>
+                    <p>
+                        {{ r.feedback }}
+                    </p>
                     <div>
                         <div class="references-line"></div><span>{{ r.autor }}</span>
                     </div>
@@ -24,7 +28,9 @@
                 }
                 @for (r of references; track r; let i = $index) {
                 <div class="references-feedback description-text">
-                    <p>{{ r.feedback }}</p>
+                    <p>
+                        {{ r.feedback }}
+                    </p>
                     <div>
                         <div class="references-line"></div><span>{{ r.autor }}</span>
                     </div>

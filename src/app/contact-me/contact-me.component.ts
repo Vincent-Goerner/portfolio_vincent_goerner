@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -10,6 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+  translatedData = inject(TranslationService);
   http = inject(HttpClient);
   contactData = {
     name: "",
@@ -44,7 +46,7 @@ export class ContactMeComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      
       ngForm.resetForm();
     }
   }
@@ -52,4 +54,9 @@ export class ContactMeComponent {
   toggleCheckbox() {
     this.contactData.checkbox = !this.contactData.checkbox;
   }
+
+  setPath() {
+    return this.translatedData.translate[this.translatedData.selectedLanguage];
+  }
+
 }

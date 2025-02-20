@@ -2,50 +2,53 @@
     <div class="contact-me">
         <div class="description-text">
             <div class="contact-me-headline">
-                <h2>Contact me</h2>
-                <h1>Let's work togther</h1>
+                <h2>{{ this.setPath().CONTACTME.H3 }}</h2>
+                <h1>{{ this.setPath().CONTACTME.H1 }}</h1>
             </div>
             <div class="contact-me-description">
-                <h2>Got a problem to solve?</h2>
+                <h2>{{ this.setPath().CONTACTME.H2 }}</h2>
                 <p>
-                    Contact me through this form, I am interested in hearing from you, knowing
-                    your ideas and contributing to your projects with my work.
+                    {{ this.setPath().CONTACTME.TEXT1 }}
                 </p>
                 <p>
-                    Need a Frontend developer? <span>Let's talk!</span>
+                    {{ this.setPath().CONTACTME.TEXT2 }} <span>{{ this.setPath().CONTACTME.TEXT3 }}</span>
                 </p>
             </div>
         </div>
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-me-form">
             <div class="contact-me-input input-name">
                 <label for="form-name">
-                    <span>What's your name?</span> 
-                    <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" placeholder="Your name goes here" type="text" name="name" required>
+                    <span>{{ this.setPath().CONTACTME.NAMELABEL }}</span> 
+                    <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" placeholder="{{ this.setPath().CONTACTME.NAME }}" type="text" name="name" required>
+                    @if (!name.valid && name.touched) {
+                        <span>{{ this.setPath().CONTACTME.NAMEERROR }}</span>
+                    }
                 </label>
             </div>
             <div class="contact-me-input input-email">
                 <label for="form-email">
-                    <span>What's your email?</span> 
-                    <input #email="ngModel" [(ngModel)]="contactData.email" minlength="10" placeholder="youremail@email.com" type="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <span>{{ this.setPath().CONTACTME.EMAILLABEL }}</span> 
+                    <input #email="ngModel" [(ngModel)]="contactData.email" minlength="10" placeholder="{{ this.setPath().CONTACTME.EMAIL }}" type="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    @if (!email.valid && email.touched) {
+                        <span>{{ this.setPath().CONTACTME.EMAILERROR }}</span>
+                    }
                 </label>
             </div>
             <div class="contact-me-input input-text">
                 <label for="form-text">
-                    <span>How can I help you?</span> 
-                    <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" placeholder="Hello Vincent, I am interested in..." type="text" name="text" required></textarea>
+                    <span>{{ this.setPath().CONTACTME.TEXTLABEL }}</span> 
+                    <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" placeholder="{{ this.setPath().CONTACTME.TEXTFIELD }}" type="text" name="text" required></textarea>
                     @if (!message.valid && message.touched) {
-                        <span>Please enter a message</span>
+                        <span>{{ this.setPath().CONTACTME.TEXTERROR }}</span>
                     }
                 </label>
             </div>
             <div class="contact-me-form-check">
                 <div>
-                    <img class="contact-me-checkbox" (click)="toggleCheckbox()" [class.opacity-full]="this.contactData.checkbox"
-                        src="../../assets/img/contact_me/checkbox_hover.png">
-                    <img class="contact-me-unchecked-box" src="../../assets/img/contact_me/checkbox.png">
-                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my dara as outlined.</p>
+                    <input class="contact-me-form-checkbox" type="checkbox" (click)="toggleCheckbox()" required>
+                    <p>{{ this.setPath().CONTACTME.POLICY1 }} <a href="#">{{ this.setPath().CONTACTME.POLICY2 }}</a> {{ this.setPath().CONTACTME.POLICY3 }}</p>
                 </div>
-                <button type="submit" class="btn">Say Hello ;)</button>
+                <button type="submit" class="btn">{{ this.setPath().CONTACTME.BTN }}</button>
             </div>
         </form>
     </div>

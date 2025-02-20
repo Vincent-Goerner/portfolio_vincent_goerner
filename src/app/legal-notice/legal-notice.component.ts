@@ -1,21 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 import { TranslationService } from '../services/translation.service';
 
 @Component({
-  selector: 'app-above-the-fold',
+  selector: 'app-legal-notice',
   standalone: true,
-  imports: [HeaderComponent],
-  templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  imports: [HeaderComponent, FooterComponent],
+  templateUrl: './legal-notice.component.html',
+  styleUrl: './legal-notice.component.scss'
 })
-
-export class AboveTheFoldComponent {
+export class LegalNoticeComponent {
   translatedData = inject(TranslationService);
-
-  constructor() {
-  }
-
+  
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }

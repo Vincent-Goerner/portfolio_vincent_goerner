@@ -1,44 +1,33 @@
 <section id="about-me" class="about-me-bg section-bg">
     <div class="about-me">
         <div class="about-me-img">
-            <img class="about-me-profile-img-bg" src="../../assets/img/about_me/img_bg.png" alt="">
-            <img class="about-me-profile-img" src="../../assets/img/about_me/bsp_img.png">
+            <img class="about-me-profile-img-bg" src="./assets/img/about_me/img_bg.png" alt="profile image">
+            <img class="about-me-profile-img" src="./assets/img/about_me/bsp_img.png" alt="profile background">
         </div>
         <div class="about-me-description description-box">
-            <h3>Who I Am</h3>
+            <h3>{{ this.setPath().ABOUTME.H3 }}</h3>
             <div class="about-me-text description-text-box">
-                <h1>About me</h1>
+                <h1>{{ this.setPath().ABOUTME.H1 }}</h1>
                 <p class="description-text">
-                    Hi, i'm a german speaking Fullstack Developer based in
-                    Dresden. Motivated by the limitless opportunities within IT. I
-                    am excited about crafting visually captivating and intuitive
-                    websites and applications.
+                    {{ this.setPath().ABOUTME.TEXT1 }}
                 </p>
                 <div class="about-me-details description-details">
                     <div>
-                        <img src="../../assets/img/about_me/location.png">
+                        <img src="./assets/img/about_me/location.png" alt="location info">
                         <p>
-                            Flexible in terms of working environments, i can work
-                            effectively both on-site in Dresden and remotely.
+                            {{ this.setPath().ABOUTME.TEXT2 }}
                         </p>
                     </div>
                     <div>
-                        <img src="../../assets/img/about_me/cognition.png">
+                        <img src="./assets/img/about_me/cognition.png" alt="current work">
                         <p>
-                            I am open-minded and always looking for personal
-                            challanges to constantly improve my knownledge and
-                            skills.
+                            {{ this.setPath().ABOUTME.TEXT3 }}
                         </p>
                     </div>
                     <div>
-                        <img src="../../assets/img/about_me/quality.png">
+                        <img src="./assets/img/about_me/quality.png" alt="personal abitions">
                         <p>
-                            In my profession, programming isn't just about
-                            wiriting code; it's a creative form of problem-solving, i
-                            take pride in my ability to distill complex technical
-                            challanges into simple, user-friendly solutions. This
-                            way, i help you achieve your goals and bring your
-                            visions to life.
+                            {{ this.setPath().ABOUTME.TEXT4 }}
                         </p>
                     </div>
                 </div>

@@ -1,26 +1,20 @@
 <section id="skills" class="skills-bg section-bg">
     <div class="skills">
         <div class="description-box">
-            <h3>Technologies</h3>
+            <h3>{{ this.setPath().SKILLS.H3 }}</h3>
             <div class="description-text-box description-text">
-                <h1>Skill Set</h1>
+                <h1>{{ this.setPath().SKILLS.H1 }}</h1>
                 <p>
-                    My journey has involved working on diverse projects,
-                    employing a range of frontend technologies and
-                    concepts. I am open to embracing new technologies
-                    and methologies to Continously enhance my skills
-                    and stay ahead in the ever-evolving landscape of web
-                    development.
+                    {{ this.setPath().SKILLS.TEXT1 }}
                 </p>
                 <div>
-                    <h2 class="skills-h2">You need</h2>
-                    <h2>another skill?</h2>
+                    <h2 class="skills-h2">{{ this.setPath().SKILLS.H2CLASS }}</h2>
+                    <h2>{{ this.setPath().SKILLS.H2 }}</h2>
                 </div>
                 <p>
-                    Feel free to contact me. I look forward to
-                    expanding on my previous knowledge.
+                    {{ this.setPath().SKILLS.TEXT2 }}
                 </p>
-                <a href="#contact-me" class="btn"><span>Let's Talk</span></a>
+                <a href="#contact-me" class="btn"><span>{{ this.setPath().SKILLS.BTN }}</span></a>
             </div>
         </div>
         <div class="skills-technologies-overview">
@@ -32,11 +26,11 @@
             }
             <div class="skills-technologie growth-mindset">
                 <div class="skills-intrests">
-                        <span>I have a special intrest in learing</span>
+                        <span>{{ this.setPath().SKILLS.INTREST }}</span>
                         <img src="./assets/img/skills/intrests_tech.png" alt="technologies react and vue js">
                 </div>
                 <img src="../../assets/img/skills/growth_mindset.png">
-                <span>Growth mindset</span>
+                <span>{{ this.setPath().SKILLS.MINDSET }}</span>
             </div>
         </div>
     </div>

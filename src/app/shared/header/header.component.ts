@@ -11,12 +11,14 @@ import { TranslationService } from '../../services/translation.service';
 export class HeaderComponent {
 
   changeLanguage: Boolean = false;
-  language = this.switchLanguage();
+  language = '';
   isScrolled = false;
   showMenu = false;
   translatedData = inject(TranslationService);
 
   constructor() {
+    this.switchLanguage()
+
     setInterval(() => {
       this.onWindowScrolled();
     }, 100);
@@ -24,7 +26,8 @@ export class HeaderComponent {
 
   switchLanguage() {
     this.changeLanguage = !this.changeLanguage;
-    return (this.changeLanguage) ? 'EN' : 'DE';
+    this.language = (this.changeLanguage) ? 'EN' : 'DE';
+    this.translatedData.selectedLanguage = (this.changeLanguage) ? 0 : 1;
   }
 
   onWindowScrolled() {
@@ -37,5 +40,9 @@ export class HeaderComponent {
 
   showMobileMenu() {
     this.showMenu = !this.showMenu;
+  }
+
+  setPath() {
+    return this.translatedData.translate[this.translatedData.selectedLanguage];
   }
 }

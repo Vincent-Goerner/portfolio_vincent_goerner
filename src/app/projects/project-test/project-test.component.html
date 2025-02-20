@@ -4,9 +4,13 @@
             <span>0{{ projectIndex + 1 }}</span>
             <h1> {{projectData.projects[projectIndex].name}} </h1>
         </div>
-        <h2>What is this project about?</h2>
+        <h2>{{ this.setPath().PROJECTS.H2 }}</h2>
         <p class="description-text">
-            {{ projectData.projects[projectIndex].descriptionEN }}
+            @if (this.translatedData.selectedLanguage === 0) {
+                {{ projectData.projects[projectIndex].descriptionEN }}
+            } @else if (this.translatedData.selectedLanguage === 1) {
+                {{ projectData.projects[projectIndex].descriptionDE }}
+            }
         </p>
         <div class="project-tech-list">
             @for (t of projectData.projects[projectIndex].technologies_logo; track t; let i = $index) {
@@ -27,6 +31,6 @@
             <img src="../../../assets/img/projects/close.png">
         </div>
         <img class="project-preview" src=" {{ projectData.projects[projectIndex].preview }} ">
-        <button class="description-text" (click)="loadNextProject()">Next project <img src="../../../assets/img/projects/next_project.png"><img class="project-next-project-hover" src="../../../assets/img/projects/next_project_hover.png"></button>
+        <button class="description-text" (click)="loadNextProject()">{{ this.setPath().PROJECTS.BTN }} <img src="../../../assets/img/projects/next_project.png"><img class="project-next-project-hover" src="../../../assets/img/projects/next_project_hover.png"></button>
     </div>
 </div>

@@ -2,17 +2,17 @@
     <app-header class="navbar"></app-header>
     <div class="above-the-fold-content">
         <div class="headlines">
-            <h2>Frontend Developer</h2>
-            <h1>Vincent Görner</h1>
+            <h2>{{ this.setPath().ATF.H2 }}</h2>
+            <h1>{{ this.setPath().ATF.H1 }}</h1>
             <div class="atf-shortcut">
-                <a href="#projects" class="btn"><span>Check my work</span></a>
-                <a href="#contact-me" class="btn"><span>Contact me</span></a>
+                <a href="#projects" class="btn"><span>{{ this.setPath().ATF.WORK }}</span></a>
+                <a href="#contact-me" class="btn"><span>{{ this.setPath().ATF.CONTACT }}</span></a>
             </div>
         </div>
         <div class="clue-content">
             <div class="clue-scroll">
                 <a class="clue-scroll-box" href="#about-me">
-                    <img src="../../../assets/img/atf_section/arrow_down.png">
+                    <img src="./assets/img/atf_section/arrow_down.png" alt="arrow down">
                 </a>
                 <div class="clue-line-green"></div>
             </div>
@@ -20,16 +20,16 @@
                 <a class="clue-mail" href="mailto:vincent.goerner@web.de">vincent.goerner&#64;web.de</a>
                 <div class="clue-img-box">
                     <a class="clue-mobile-mail" href="mailto:vincent.goerner@web.de">
-                        <img class="clue-mobile-mail-hover" src="./assets/img/atf_section/mobile_mail_hover.png" alt="mobile-mail-hover">
-                        <img src="./assets/img/atf_section/mobile_mail.png" alt="mobile-mail">
+                        <img class="clue-mobile-mail-hover" src="./assets/img/atf_section/mobile_mail_hover.png" alt="mobile mail hover">
+                        <img src="./assets/img/atf_section/mobile_mail.png" alt="mobile mail">
                     </a>
                     <a href="https://github.com/A1exi0sD4rc">
-                        <img class="clue-github-hover" src="../../assets/img/atf_section/github_hover.png">
-                        <img class="clue-github" src="../../assets/img/atf_section/github.png">
+                        <img class="clue-github-hover" src="./assets/img/atf_section/github_hover.png" alt="github hovered">
+                        <img class="clue-github" src="./assets/img/atf_section/github.png" alt="github">
                     </a>
                     <a href="">
-                        <img class="clue-linkedin-hover" src="../../assets/img/atf_section/linkedin_hover.png">
-                        <img class="clue-linkedin" src="../../assets/img/atf_section/linkedin.png">
+                        <img class="clue-linkedin-hover" src="./assets/img/atf_section/linkedin_hover.png" alt="linkedin hover">
+                        <img class="clue-linkedin" src="./assets/img/atf_section/linkedin.png" alt="linkedin">
                     </a>
                 </div>
                 <div class="clue-line-white"></div>
@@ -42,19 +42,19 @@
             <div class="clue-marquee-point-box">
                 <div class="clue-marquee-point"></div>
             </div>
-            <span>Available for remote work</span>
+            <span>{{ this.setPath().ATF.MARQUEE1 }}</span>
             <div class="clue-marquee-point-box">
                 <div class="clue-marquee-point"></div>
             </div>
-            <span>Frontend Developer</span>
+            <span>{{ this.setPath().ATF.MARQUEE2 }}</span>
             <div class="clue-marquee-point-box">
                 <div class="clue-marquee-point"></div>
             </div>
-            <span>Based in Dresden</span>
+            <span>{{ this.setPath().ATF.MARQUEE3 }}</span>
             <div class="clue-marquee-point-box">
                 <div class="clue-marquee-point"></div>
             </div>
-            <span>Open for learning</span>
+            <span>{{ this.setPath().ATF.MARQUEE4 }}</span>
             }
         </div>
     </div>

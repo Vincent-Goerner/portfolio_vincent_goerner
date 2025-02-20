@@ -9,11 +9,12 @@ import { ReferencesComponent } from './references/references.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ReferencesComponent, ContactMeComponent, FooterComponent, HeaderComponent],
+  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ReferencesComponent, ContactMeComponent, FooterComponent, HeaderComponent, LegalNoticeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

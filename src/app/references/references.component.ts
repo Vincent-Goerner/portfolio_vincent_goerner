@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-references',
@@ -9,21 +10,22 @@ import { Component } from '@angular/core';
 })
 
 export class ReferencesComponent {
+  translatedData = inject(TranslationService);
   references = [
     {
       autor: 'M. Marrocu - Frontend Developer',
-      feedback: 'Vincent is brimming with creativity and always has clever ideas. He is very committed and finds a solution for every problem. With him in the team, things just run smoothly!',
-      highlighted: false
+      feedback: this.translatedData.translate[this.translatedData.selectedLanguage].REFERENCES.REF1,
+      highlighted: false,
     },
     {
       autor: 'T. Schulz - Team Partner',
-      feedback: 'Our project benefited enormously from Vincent efficient way of working.',
-      highlighted: false
+      feedback: this.translatedData.translate[this.translatedData.selectedLanguage].REFERENCES.REF2,
+      highlighted: false,
     },
     {
       autor: 'J. Janisch - Team Partner',
-      feedback: 'Working with Vincent was really good and effectily. His knowledge is impressiv and his kind to think always useful.',
-      highlighted: false
+      feedback: this.translatedData.translate[this.translatedData.selectedLanguage].REFERENCES.REF3,
+      highlighted: false,
     }
   ];
   isHighlighted: number = 0;
@@ -32,8 +34,21 @@ export class ReferencesComponent {
   sliderCenter = false;
 
   constructor() {
+    setInterval (() => {
+      this.setLanguage(); 
+    }, 100);
     this.moveSlider();
-    this.highlightFeedback();    
+    this.highlightFeedback();  
+  }
+
+  setPath() {
+    return this.translatedData.translate[this.translatedData.selectedLanguage];
+  }
+
+  setLanguage() {
+      this.references[0].feedback = this.setPath().REFERENCES.REF1;
+      this.references[1].feedback = this.setPath().REFERENCES.REF2;
+      this.references[2].feedback = this.setPath().REFERENCES.REF3;
   }
 
   highlightFeedback() {    

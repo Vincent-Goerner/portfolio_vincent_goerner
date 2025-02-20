@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  translatedData = inject(TranslationService);
   technologieSource = [
     {
       name: 'HTML',
@@ -51,4 +53,7 @@ export class SkillsComponent {
     },
   ];
 
+  setPath() {
+    return this.translatedData.translate[this.translatedData.selectedLanguage];
+  }
 }

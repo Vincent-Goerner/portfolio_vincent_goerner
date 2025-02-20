@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { ProjectsComponent } from '../projects.component';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-project-test',
@@ -10,6 +11,7 @@ import { ProjectsComponent } from '../projects.component';
 })
 
 export class ProjectTestComponent {
+  translatedData = inject(TranslationService);
   projectData = inject(ProjectsComponent);
   @Input()projectIndex = 0;
 
@@ -23,5 +25,9 @@ export class ProjectTestComponent {
     } else {
       this.projectData.loadIndex = 0;
     }
+  }
+
+  setPath() {
+    return this.translatedData.translate[this.translatedData.selectedLanguage];
   }
 }

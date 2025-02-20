@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  translatedData = inject(TranslationService);
 
+  setPath() {
+    return this.translatedData.translate[this.translatedData.selectedLanguage];
+  }
 }

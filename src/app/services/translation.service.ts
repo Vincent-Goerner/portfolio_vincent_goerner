@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 
 export class TranslationService {
-  selectedLanguage: string = '';
-  translate = {
-    en: {
+  selectedLanguage: number = 0;
+  translate = [
+    {
       HEADER: {
         ABOUT: 'About me',
         SKILLS: 'Skills',
@@ -64,14 +64,22 @@ export class TranslationService {
         TEXT3: 'Let`s talk!',
         NAMELABEL: 'What`s your name?',
         NAME: 'Your name goes here',
+        NAMEERROR: 'Please enter your name',
         EMAILLABEL: 'What`s your email?',
         EMAIL: 'youremail@email.com',
+        EMAILERROR: 'Please enter your email',
         TEXTLABEL: 'How can I help you?',
         TEXTFIELD: 'Hello Vincent, I am intrested in...',
+        TEXTERROR: 'Please enter a message',
         POLICY1: 'I`ve read the',
         POLICY2: 'privacy policy',
         POLICY3: 'and agree to the processing of my dara as outlined.',
+        POLICYERROR: 'Please accept the privacy policy',
         BTN: 'Say Hello ;)'
+      },
+      LEGALNOTICE: {
+        H1: 'Legal Notice',
+        
       },
       FOOTER: {
         TEXT1: 'Web Developer',
@@ -79,20 +87,19 @@ export class TranslationService {
         LINK: 'Legal Notice',
       }
     },
-
-    de: {
+    {
       HEADER: {
         ABOUT: 'Über mich',
         SKILLS: 'Fähigkeiten',
         PROJECTS: 'Projekte'
       },
       ATF: {
-        H2: 'Frontend-Entwickler',
+        H2: 'Frontend Entwickler',
         H1: 'Vincent Görner',
         WORK: 'Meine Projekte',
         CONTACT: 'Konatkt',
         MARQUEE1: 'Verfügbar für Home Office',
-        MARQUEE2: 'Frontend Developer',
+        MARQUEE2: 'Frontend Entwickler',
         MARQUEE3: 'Wohnhaft in Radeberg',
         MARQUEE4: 'Offen für Weiterentwicklung'
       },
@@ -123,7 +130,7 @@ export class TranslationService {
         BTN: 'Nächstes Projekt'
       },
       REFERENCES: {
-        H2: 'Was meine Kollegen über mich sagen:',
+        H2: 'Was meine Kollegen über mich sagen',
         REF1: 'Vincent  sprudelt vor Kreativität und hat immer clevere Ideen parat. Er bringt sich mit viel Engagement ein und findet für jedes Problem eine Lösung. Mit ihm im Team läuft es einfach rund!',
         REF2: 'Unser Projekt hat enorm von der effizienten Arbeitsweise von Vincent profitiert.',
         REF3: 'Die Zusammenarbeit mit Vincent war wirklich gut und effektiv. Sein Wissen ist beeindruckend und seine Art zu denken ist immer nützlich.'
@@ -136,15 +143,23 @@ export class TranslationService {
         TEXT2: 'Brauchen Sie einen Frontend-Entwickler?',
         TEXT3: 'Lasst uns reden!',
         NAMELABEL: 'Wie ist Ihr Name?',
-        NAME: 'Hier den Name...',
+        NAME: 'Hier den Name eingeben',
+        NAMEERROR: 'Bitte deinen Namen eingeben',
         EMAILLABEL: 'Wie ist Ihre Email?',
         EMAIL: 'deineemail@email.com',
+        EMAILERROR: 'Bitte deine Email eingeben',
         TEXTLABEL: 'Wie kann ich helfen?',
         TEXTFIELD: 'Hallo Vincent, ich bin interessiert an...',
+        TEXTERROR: 'Bitte Nachricht eingeben',
         POLICY1: 'Ich habe die',
         POLICY2: 'Datenschutzerklärung',
         POLICY3: 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
+        POLICYERROR: 'Bitte Datenschutzerklärung akzeptieren',
         BTN: 'Sag Hallo ;)'
+      },
+      LEGALNOTICE: {
+        H1: 'Impressum',
+
       },
       FOOTER: {
         TEXT1: 'Web-Entwickler',
@@ -152,5 +167,5 @@ export class TranslationService {
         LINK: 'Impressum',
       }
     }
-  };
+  ];
 }
