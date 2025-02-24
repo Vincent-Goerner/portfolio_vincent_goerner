@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { ProjectsComponent } from '../projects.component';
-import { TranslationService } from '../../services/translation.service';
+import { TranslationService } from '../../../services/translation.service';
 
 @Component({
   selector: 'app-project-test',

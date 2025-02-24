@@ -21,16 +21,16 @@
             }
         </div>
         <div class="project-btn">
-            <a href="{{ projectData.projects[projectIndex].link }}" class="btn">GitHub <img src="../../../assets/img/projects/arrow_green.png"></a>
-            <a href="" class="btn">Live Test <img src="../../../assets/img/projects/arrow_green.png"></a>
+            <a href="{{ projectData.projects[projectIndex].link }}" class="btn">GitHub <img src="./assets/img/projects/arrow_green.png"></a>
+            <a href="" class="btn">Live Test <img src="./assets/img/projects/arrow_green.png"></a>
         </div>
     </div>
     <div class="project-example">
         <div class="project-close" (click)="closeDetails()">
-            <img class="project-close-btn-hover" src="../../../assets/img/projects/close_hover.png">
-            <img src="../../../assets/img/projects/close.png">
+            <img class="project-close-btn-hover" src="./assets/img/projects/close_hover.png">
+            <img src="./assets/img/projects/close.png">
         </div>
         <img class="project-preview" src=" {{ projectData.projects[projectIndex].preview }} ">
-        <button class="description-text" (click)="loadNextProject()">{{ this.setPath().PROJECTS.BTN }} <img src="../../../assets/img/projects/next_project.png"><img class="project-next-project-hover" src="../../../assets/img/projects/next_project_hover.png"></button>
+        <button class="description-text" (click)="loadNextProject()">{{ this.setPath().PROJECTS.BTN }} <img src="./assets/img/projects/next_project.png"><img class="project-next-project-hover" src="../../../assets/img/projects/next_project_hover.png"></button>
     </div>
 </div>

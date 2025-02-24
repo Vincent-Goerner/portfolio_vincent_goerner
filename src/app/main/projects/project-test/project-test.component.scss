@@ -1,5 +1,5 @@
-@import '../../shared/variables.scss';
-@import '../../shared/general.scss';
+@import '../../../shared/variables.scss';
+@import '../../../shared/general.scss';
 
 .project-test {
     position: absolute;
@@ -8,7 +8,7 @@
     width: 1250px;
     display: flex;
     justify-content: space-between;
-    background-image: url("../../../assets/img/projects/background.png");
+    background-image: url("../../../../assets/img/projects/background.png");
     background-size: cover;
     border: solid 1px $green;
     border-radius: 30px;

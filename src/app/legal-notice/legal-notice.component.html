@@ -1,17 +1,30 @@
-<app-header></app-header>
-<section class="section-bg legal-notice-bg">
+<section id="legal-notice" class="section-bg legal-notice-bg">
     <div class="legal-notice">
-        <h1>Impressum</h1>
-    
-        <p>Vincent G&ouml;rner<br />
-            Gro&szlig;erkmannsdorferstrasse 99<br />
-            01514 Radeberg</p>
-    
-        <h2>Kontakt</h2>
-        <p>Telefon: &#91;Telefonnummer&#93;<br />
-            E-Mail: matrix.2000&#64;web.de</p>
-    
-        <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
+        <h1>{{ setPath().LEGALNOTICE.H1 }}</h1>
+        <h3>{{ setPath().LEGALNOTICE.H3_1 }}</h3>
+        <p><b>Internet:  </b> <a href="https://vincent-goerner.developerakademie.net/angular-projects/portfolio/"
+                target="_blank">https://vincent-goerner.developerakademie.net/angular-projects/portfolio/</a></p>
+
+        <p><b>{{ setPath().LEGALNOTICE.TEXT1 }}</b> Vincent Görner<br><br></p>
+
+        <h3>{{ setPath().LEGALNOTICE.H3_2 }}</h3>
+        <p>Großerkmannsdorferstraße 97</p>
+        <p>01477 Arnsdorf</p>
+
+        <p><b>{{ setPath().LEGALNOTICE.B }}</b> <a href="tel:081293749812734"> 081293749812734</a></p>
+
+        <p><b>Email:</b> <a href="mailto:matrix.2000@web.de"> matrix.2000&#64;web.de</a><br><br></p>
+
+        <h3>{{ setPath().LEGALNOTICE.H3_3 }}</h3>
+        <br>
+        <p>{{ setPath().LEGALNOTICE.TEXT4 }}</p>
+        <br>
+        <h3>{{ setPath().LEGALNOTICE.H3_4 }}</h3>
+        <br>
+        <p>{{ setPath().LEGALNOTICE.TEXT5 }}</p>
+        <br>
+        <p>{{ setPath().LEGALNOTICE.TEXT6 }}<a href="https://impressum-generator.info/" target="_blank">impressum-generator.info</a> -
+            powered by <a href="https://abfindungshero.de/" target="_blank">abfindungshero.de</a><br><br>
+        </p>
     </div>
 </section>
-<app-footer></app-footer>

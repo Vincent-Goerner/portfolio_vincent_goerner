@@ -1,20 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { HeaderComponent } from '../shared/header/header.component';
 import { TranslationService } from '../services/translation.service';
 
 @Component({
-  selector: 'app-above-the-fold',
+  selector: 'app-privacy-policy',
   standalone: true,
-  imports: [HeaderComponent],
-  templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  imports: [],
+  templateUrl: './privacy-policy.component.html',
+  styleUrl: './privacy-policy.component.scss'
 })
-
-export class AboveTheFoldComponent {
+export class PrivacyPolicyComponent {
   translatedData = inject(TranslationService);
-
-  constructor() {
-  }
 
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];

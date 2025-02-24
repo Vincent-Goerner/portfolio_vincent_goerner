@@ -46,7 +46,7 @@
             <div class="contact-me-form-check">
                 <div>
                     <input class="contact-me-form-checkbox" type="checkbox" (click)="toggleCheckbox()" required>
-                    <p>{{ this.setPath().CONTACTME.POLICY1 }} <a href="#">{{ this.setPath().CONTACTME.POLICY2 }}</a> {{ this.setPath().CONTACTME.POLICY3 }}</p>
+                    <p>{{ this.setPath().CONTACTME.POLICY1 }} <a (click)="openPrivacyPolicy()">{{ this.setPath().CONTACTME.POLICY2 }}</a> {{ this.setPath().CONTACTME.POLICY3 }}</p>
                 </div>
                 <button type="submit" class="btn">{{ this.setPath().CONTACTME.BTN }}</button>
             </div>

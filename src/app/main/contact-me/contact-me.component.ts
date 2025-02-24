@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { TranslationService } from '../services/translation.service';
+import { TranslationService } from '../../services/translation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
@@ -12,6 +13,7 @@ import { TranslationService } from '../services/translation.service';
 })
 export class ContactMeComponent {
   translatedData = inject(TranslationService);
+  router = inject(Router);
   http = inject(HttpClient);
   contactData = {
     name: "",
@@ -59,4 +61,7 @@ export class ContactMeComponent {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }
 
+  openPrivacyPolicy() {
+    this.router.navigateByUrl('privacy-policy');
+  }
 }

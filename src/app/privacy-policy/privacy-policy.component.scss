@@ -1,15 +1,15 @@
 @import '../shared/general.scss';
-@import '../shared/variables.scss';
 
-.legal-notice-bg {
+.pp-bg {
     background-color: $gray;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 100px;
+    height: fit-content;
 }
 
-.legal-notice {
+.privacy-policy {
     max-width: 1440px;
 
     h1 {
@@ -34,11 +34,7 @@
 
 @media (max-width: 900px) {
     
-    .legal-notice-bg {
-        height: fit-content;
-    }
-    
-    .legal-notice {
+    .privacy-policy {
         width: 360px;
 
         h1 {
@@ -61,7 +57,7 @@
 
 @media (max-width: 400px) {
     
-    .legal-notice {
+    .privacy-policy {
         width: 300px;
 
         h1 {
