@@ -28,7 +28,7 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       technologies_logo: [0, 1, 2],
       img: '../../assets/img/projects/el_polo_loco.png',
-      preview: '../../assets/img/projects/el_polo_loco_preview.png',
+      preview: '../../assets/img/projects/tlotl_preview.png',
       link: 'https://github.com/A1exi0sD4rc/The-Legacy-of-the-Living',
       descriptionEN: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       descriptionDE: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.'

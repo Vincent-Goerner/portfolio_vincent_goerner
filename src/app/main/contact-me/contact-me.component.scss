@@ -64,7 +64,6 @@
 
     label {
         font-family: 'fira code';
-        margin: 0;
         font-size: 24px;
         color: #3DCFB6;
     }
@@ -101,22 +100,36 @@
 
     >div {
         display: flex;
-        gap: 8px;
-        position: relative;
+        flex-direction: column;
+        gap: 16px;
 
-        p {
-            margin: 0;
+        >div {
+            display: flex;
+            gap: 8px;
+            position: relative;
+    
+            p {
+                margin: 0;
+            }
+    
+            a {
+                font-family: 'fira code';
+                text-decoration: none;
+                color: $green;
+                cursor: pointer;
+    
+                &:hover {
+                    color: white;
+                }
+            }
         }
 
-        a {
-            font-family: 'fira code';
-            text-decoration: none;
-            color: $green;
-            cursor: pointer;
-
-            &:hover {
-                color: white;
-            }
+        span {
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+            margin-left: 32px;
+            font-size: 24px;
+            color: #3DCFB6;            
         }
     }
 
@@ -127,6 +140,38 @@
         accent-color: $gray;
         outline: solid 1px $green;
         border-radius: 10%;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+        width: fit-content;
+        height: 48px;
+        border: solid 1px #FFFFFF;
+        border-radius: 100px;
+        background-color: #ffffff00;
+        color: white;
+        font-family: 'karla';
+        font-size: 18px;
+        padding: 0 24px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+    
+        span {
+            cursor: pointer;
+            transition: all 125ms ease-in-out;
+        }
+    
+        &:hover {
+            color: $green;
+            border: solid 1px $green;
+    
+            span {
+                animation: moveText 1.5s linear infinite;
+            }
+        }
     }
 }
 

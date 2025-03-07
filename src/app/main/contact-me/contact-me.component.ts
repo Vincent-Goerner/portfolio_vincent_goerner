@@ -22,6 +22,7 @@ export class ContactMeComponent {
     checkbox: false,
   }
   mailTest = true;
+  submitFail = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -44,10 +45,11 @@ export class ContactMeComponent {
           },
           error: (error) => {
             console.error(error);
+            this.submitFail = true;
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.contactData.checkbox) {
       
       ngForm.resetForm();
     }
@@ -55,6 +57,11 @@ export class ContactMeComponent {
 
   toggleCheckbox() {
     this.contactData.checkbox = !this.contactData.checkbox;
+    if (!this.contactData.checkbox) {
+      this.submitFail = true;
+    } else {
+      this.submitFail = false;
+    }
   }
 
   setPath() {
@@ -63,5 +70,14 @@ export class ContactMeComponent {
 
   openPrivacyPolicy() {
     this.router.navigateByUrl('privacy-policy');
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+    })
   }
 }

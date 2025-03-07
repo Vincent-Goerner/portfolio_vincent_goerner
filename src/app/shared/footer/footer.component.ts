@@ -20,5 +20,14 @@ export class FooterComponent {
 
   openImprint() {
     this.router.navigateByUrl('legal-notice');
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+    })
   }
 }
