@@ -13,43 +13,43 @@ export class SkillsComponent {
   technologieSource = [
     {
       name: 'HTML',
-      img: '../../assets/img/skills/html.png'
+      img: './assets/img/skills/html.png'
     },
     {
       name: 'CSS',
-      img: '../../assets/img/skills/css.png'
+      img: './assets/img/skills/css.png'
     },
     {
       name: 'JavaScript',
-      img: '../../assets/img/skills/javascript.png'
+      img: './assets/img/skills/javascript.png'
     },
     {
       name: 'Material Design',
-      img: '../../assets/img/skills/material_design.png'
+      img: './assets/img/skills/material_design.png'
     },
     {
       name: 'TypeScript',
-      img: '../../assets/img/skills/typescript.png'
+      img: './assets/img/skills/typescript.png'
     },
     {
       name: 'Angular',
-      img: '../../assets/img/skills/angular.png'
+      img: './assets/img/skills/angular.png'
     },
     {
       name: 'Firebase',
-      img: '../../assets/img/skills/firebase.png'
+      img: './assets/img/skills/firebase.png'
     },
     {
       name: 'GIT',
-      img: '../../assets/img/skills/git.png'
+      img: './assets/img/skills/git.png'
     },
     {
       name: 'Rest-Api',
-      img: '../../assets/img/skills/rest-api.png'
+      img: './assets/img/skills/rest-api.png'
     },
     {
       name: 'Scrum',
-      img: '../../assets/img/skills/scrum.png'
+      img: './assets/img/skills/scrum.png'
     },
   ];
 

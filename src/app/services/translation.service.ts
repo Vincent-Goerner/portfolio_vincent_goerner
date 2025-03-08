@@ -52,8 +52,8 @@ export class TranslationService {
       REFERENCES: {
         H2: 'What my colleagues say about me',
         REF1: 'Vincent is brimming with creativity and always has clever ideas. He is very committed and finds a solution for every problem. With him in the team, things just run smoothly!',
-        REF2: 'Our project benefited enormously from Vincent efficient way of working.',
-        REF3: 'Working with Vincent was really good and effectily. His knowledge is impressiv and his kind to think always useful.'
+        REF2: 'Vincent always works professionally and solution-oriented and shows a high level of precision in all tasks. In the team, he ensures open communication and actively contributes to achieving common goals.',
+        REF3: 'Working with Vincent is very efficient and always brings creative ideas that improve the quality of our projects.'
       },
       CONTACTME: {
         H3: 'Contact me',
@@ -202,8 +202,8 @@ export class TranslationService {
       REFERENCES: {
         H2: 'Was meine Kollegen über mich sagen',
         REF1: 'Vincent  sprudelt vor Kreativität und hat immer clevere Ideen parat. Er bringt sich mit viel Engagement ein und findet für jedes Problem eine Lösung. Mit ihm im Team läuft es einfach rund!',
-        REF2: 'Unser Projekt hat enorm von der effizienten Arbeitsweise von Vincent profitiert.',
-        REF3: 'Die Zusammenarbeit mit Vincent war wirklich gut und effektiv. Sein Wissen ist beeindruckend und seine Art zu denken ist immer nützlich.'
+        REF2: 'Vincent arbeitet stets professionell und lösungsorientiert und zeigt eine hohe Genauigkeit in allen Aufgaben. Im Team sorgt er für eine offene Kommunikation und trägt aktiv zur Erreichung gemeinsamer Ziele bei.',
+        REF3: 'Mit Vincent zu arbeiten ist sehr effizient und bringt immer kreative Ideen ein, die die Qualität unserer Projekte verbessern.'
       },
       CONTACTME: {
         H3: 'Kontakt',

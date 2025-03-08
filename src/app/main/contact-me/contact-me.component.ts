@@ -52,7 +52,22 @@ export class ContactMeComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.contactData.checkbox) {
       
       ngForm.resetForm();
+      this.submitForm(ngForm);
     }
+  }
+
+  submitForm(ngForm: NgForm) {
+    this.http
+      .post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
   }
 
   toggleCheckbox() {

@@ -18,7 +18,7 @@
             @for (p of projects; track p; let i = $index) {
                 <a href="#projects" class="projects-overview" (click)="setProjectData(i)">
                     <div class="projects-title">
-                        <h3>{{ p.name }}</h3> <img src="../../assets/img/projects/arrow.png">
+                        <h3>{{ p.name }}</h3> <img src="./assets/img/projects/arrow.png">
                     </div>
                     <div class="description-technologies">
                     @for (t of p.technologies; track t; let l = $index) {
@@ -28,7 +28,7 @@
                             {{ t }}
                         }
                     </div>
-                    <img class="projects-img-bg" src="../../assets/img/projects/img_bg.png">
+                    <img class="projects-img-bg" src="./assets/img/projects/img_bg.png">
                     <img class="projects-title-img" src="{{ p.preview }}">
                 </a>
             }

@@ -23,7 +23,7 @@
 .project-description {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     width: 540px;
 
     >.project-title {
@@ -39,6 +39,7 @@
 
         >h1 {
             font-family: 'fira code';
+            font-size: 56px;
             color: white;
         }
     }

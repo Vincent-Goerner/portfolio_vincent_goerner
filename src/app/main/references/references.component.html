@@ -40,8 +40,8 @@
         </div>
         <div class="references-navbar">
             <img class="references-left-hover" (click)="setHighlight('-')"
-                src="../../assets/img/references/left_hover.png">
-            <img src="../../assets/img/references/left.png">
+                src="./assets/img/references/left_hover.png">
+            <img src="./assets/img/references/left.png">
             <div>
                 @for (n of references; track n; let i = $index) {
                 <div [class.references-nav-point-highlighted]="references[i].highlighted" class="references-nav-point">
@@ -49,8 +49,8 @@
                 }
             </div>
             <img class="references-right-hover" (click)="setHighlight('+')"
-                src="../../assets/img/references/right_hover.png">
-            <img src="../../assets/img/references/right.png">
+                src="./assets/img/references/right_hover.png">
+            <img src="./assets/img/references/right.png">
         </div>
     </div>
 </section>

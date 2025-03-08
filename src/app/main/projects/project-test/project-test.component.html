@@ -7,22 +7,23 @@
         <h2>{{ this.setPath().PROJECTS.H2 }}</h2>
         <p class="description-text">
             @if (this.translatedData.selectedLanguage === 0) {
-                {{ projectData.projects[projectIndex].descriptionEN }}
+            {{ projectData.projects[projectIndex].descriptionEN }}
             } @else if (this.translatedData.selectedLanguage === 1) {
-                {{ projectData.projects[projectIndex].descriptionDE }}
+            {{ projectData.projects[projectIndex].descriptionDE }}
             }
         </p>
         <div class="project-tech-list">
             @for (t of projectData.projects[projectIndex].technologies_logo; track t; let i = $index) {
-                <div>
-                    <img src="{{ projectData.technologieImg[projectData.projects[projectIndex].technologies_logo[i]] }}">
-                    <span class="project-technologie">{{ projectData.projects[projectIndex].technologies[i] }}</span>
-                </div>
+            <div>
+                <img src="{{ projectData.technologieImg[projectData.projects[projectIndex].technologies_logo[i]] }}">
+                <span class="project-technologie">{{ projectData.projects[projectIndex].technologies[i] }}</span>
+            </div>
             }
         </div>
         <div class="project-btn">
-            <a href="{{ projectData.projects[projectIndex].link }}" class="btn">GitHub <img src="./assets/img/projects/arrow_green.png"></a>
-            <a href="" class="btn">Live Test <img src="./assets/img/projects/arrow_green.png"></a>
+            <a href="{{ projectData.projects[projectIndex].link }}" class="btn">GitHub <img
+                    src="./assets/img/projects/arrow_green.png"></a>
+            <a href="{{ projectData.projects[projectIndex].test }}" class="btn">Live Test <img src="./assets/img/projects/arrow_green.png"></a>
         </div>
     </div>
     <div class="project-example">
@@ -31,6 +32,9 @@
             <img src="./assets/img/projects/close.png">
         </div>
         <img class="project-preview" src=" {{ projectData.projects[projectIndex].img }} ">
-        <button class="description-text" (click)="loadNextProject()">{{ this.setPath().PROJECTS.BTN }} <img src="./assets/img/projects/next_project.png"><img class="project-next-project-hover" src="../../../assets/img/projects/next_project_hover.png"></button>
+        <button class="description-text" (click)="loadNextProject()">{{ this.setPath().PROJECTS.BTN }}
+            <img src="./assets/img/projects/next_project.png">
+            <img class="project-next-project-hover" src="./assets/img/projects/next_project_hover.png">
+        </button>
     </div>
 </div>
