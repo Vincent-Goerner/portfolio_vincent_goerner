@@ -45,6 +45,11 @@
     flex-direction: column;
     width: 600px;
 
+    p {
+        margin: 0;
+        color: red;
+    }
+
     .contact-me-input {
         display: flex;
         flex-direction: column;
@@ -108,8 +113,9 @@
             gap: 8px;
             position: relative;
     
-            p {
+            span {
                 margin: 0;
+                color: $green;
             }
     
             a {
@@ -124,12 +130,12 @@
             }
         }
 
-        span {
+        p {
             opacity: 0;
             transition: all 125ms ease-in-out;
             margin-left: 32px;
             font-size: 24px;
-            color: #3DCFB6;            
+            color: red;            
         }
     }
 

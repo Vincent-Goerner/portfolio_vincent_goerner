@@ -13,5 +13,18 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
+
 export class MainComponent {
+
+  constructor() {
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+    })
+  }
 }

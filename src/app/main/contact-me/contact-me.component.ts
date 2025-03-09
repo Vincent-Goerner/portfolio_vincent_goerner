@@ -11,21 +11,22 @@ import { Router } from '@angular/router';
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
+
 export class ContactMeComponent {
   translatedData = inject(TranslationService);
   router = inject(Router);
   http = inject(HttpClient);
+
   contactData = {
     name: "",
     email: "",
     message: "",
     checkbox: false,
   }
-  mailTest = true;
+  mailTest = false;
   submitFail = false;
-
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://vincentgoerner.com/angular-projects/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -36,38 +37,25 @@ export class ContactMeComponent {
   };
 
   onSubmit(ngForm: NgForm) { // wenn das Project lokal gehostet wird kommt ein Fehler und das MUSS so sein
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest || ngForm.submitted && ngForm.form.valid && !this.contactData.checkbox) {
+    let checkbox = <HTMLInputElement> document.getElementById('checkbox');
+
+    if (ngForm.submitted && ngForm.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
 
             ngForm.resetForm();
+            checkbox.checked = false;
           },
           error: (error) => {
             console.error(error);
-            this.submitFail = true;
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.contactData.checkbox) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // für Testmodus
       
       ngForm.resetForm();
-      this.submitForm(ngForm);
     }
-  }
-
-  submitForm(ngForm: NgForm) {
-    this.http
-      .post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-          ngForm.resetForm();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
   }
 
   toggleCheckbox() {

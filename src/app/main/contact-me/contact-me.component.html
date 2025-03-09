@@ -21,7 +21,7 @@
                     <span>{{ this.setPath().CONTACTME.NAMELABEL }}</span> 
                     <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" placeholder="{{ this.setPath().CONTACTME.NAME }}" type="text" name="name" required>
                     @if (!name.valid && name.touched) {
-                        <span>{{ this.setPath().CONTACTME.NAMEERROR }}</span>
+                        <p>{{ this.setPath().CONTACTME.NAMEERROR }}</p>
                     }
                 </label>
             </div>
@@ -30,7 +30,7 @@
                     <span>{{ this.setPath().CONTACTME.EMAILLABEL }}</span> 
                     <input #email="ngModel" [(ngModel)]="contactData.email" minlength="10" placeholder="{{ this.setPath().CONTACTME.EMAIL }}" type="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                     @if (!email.valid && email.touched) {
-                        <span>{{ this.setPath().CONTACTME.EMAILERROR }}</span>
+                        <p>{{ this.setPath().CONTACTME.EMAILERROR }}</p>
                     }
                 </label>
             </div>
@@ -39,17 +39,17 @@
                     <span>{{ this.setPath().CONTACTME.TEXTLABEL }}</span> 
                     <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" placeholder="{{ this.setPath().CONTACTME.TEXTFIELD }}" type="text" name="text" required></textarea>
                     @if (!message.valid && message.touched) {
-                        <span>{{ this.setPath().CONTACTME.TEXTERROR }}</span>
+                        <p>{{ this.setPath().CONTACTME.TEXTERROR }}</p>
                     }
                 </label>
             </div>
             <div class="contact-me-form-check">
                 <div>
                     <div>
-                        <input class="contact-me-form-checkbox" type="checkbox" (click)="toggleCheckbox()" required>
-                        <p>{{ this.setPath().CONTACTME.POLICY1 }} <a (click)="openPrivacyPolicy()">{{ this.setPath().CONTACTME.POLICY2 }}</a> {{ this.setPath().CONTACTME.POLICY3 }}</p>
+                        <input class="contact-me-form-checkbox" type="checkbox" id="checkbox" (click)="toggleCheckbox()" required>
+                        <span>{{ this.setPath().CONTACTME.POLICY1 }} <a (click)="openPrivacyPolicy()">{{ this.setPath().CONTACTME.POLICY2 }}</a> {{ this.setPath().CONTACTME.POLICY3 }}</span>
                     </div>
-                    <span [class.opacity-full]="this.submitFail">{{ this.setPath().CONTACTME.CHECKERROR }}</span>
+                    <p [class.opacity-full]="this.submitFail">{{ this.setPath().CONTACTME.CHECKERROR }}</p>
                 </div>
                 <button id="submit-btn" type="submit" class="btn" [disabled]="!contactData.checkbox">{{ this.setPath().CONTACTME.BTN }}</button>
             </div>
