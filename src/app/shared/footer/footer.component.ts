@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
 export class FooterComponent {
   translatedData = inject(TranslationService);
   router = inject(Router);
+  github = "https://github.com/A1exi0sD4rc";
+  linkedin = "https://www.linkedin.com/in/vincent-g%C3%B6rner-3b48a6353/";
 
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
@@ -29,5 +31,9 @@ export class FooterComponent {
     window.scrollTo({
       top: 0,
     })
+  }
+  
+  openNewTab(a: string) {
+    window.open(a);
   }
 }

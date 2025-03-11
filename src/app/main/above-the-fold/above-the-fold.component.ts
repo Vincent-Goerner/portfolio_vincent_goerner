@@ -12,11 +12,17 @@ import { TranslationService } from '../../services/translation.service';
 
 export class AboveTheFoldComponent {
   translatedData = inject(TranslationService);
+  github = "https://github.com/A1exi0sD4rc";
+  linkedin = "https://www.linkedin.com/in/vincent-g%C3%B6rner-3b48a6353/";
 
   constructor() {
   }
 
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
+  }
+  
+  openNewTab(a: string) {
+    window.open(a);
   }
 }

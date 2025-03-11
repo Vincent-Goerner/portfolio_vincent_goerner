@@ -72,9 +72,7 @@ export class ReferencesComponent {
     if (next == '+') {
       if (this.isHighlighted < this.references.length - 1) {
         this.isHighlighted++;
-      } else {
-        this.isHighlighted = 0;
-      }
+      } else {this.isHighlighted = 0;}
     }
     this.moveSlider();
     this.highlightFeedback();

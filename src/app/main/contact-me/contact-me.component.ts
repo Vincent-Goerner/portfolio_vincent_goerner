@@ -26,7 +26,7 @@ export class ContactMeComponent {
   mailTest = false;
   submitFail = false;
   post = {
-    endPoint: 'https://vincentgoerner.com/angular-projects/portfolio/sendMail.php',
+    endPoint: 'https://vincentgoerner.com/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,22 +38,17 @@ export class ContactMeComponent {
 
   onSubmit(ngForm: NgForm) { // wenn das Project lokal gehostet wird kommt ein Fehler und das MUSS so sein
     let checkbox = <HTMLInputElement> document.getElementById('checkbox');
-
     if (ngForm.submitted && ngForm.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
             checkbox.checked = false;
           },
-          error: (error) => {
-            console.error(error);
-          },
+          error: (error) => {console.error(error)},
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // für Testmodus
-      
       ngForm.resetForm();
     }
   }

@@ -15,16 +15,4 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 })
 
 export class MainComponent {
-
-  constructor() {
-    setTimeout(() => {
-      this.scrollToTop();
-    }, 100);
-  }
-
-  scrollToTop() {
-    window.scrollTo({
-      top: 0,
-    })
-  }
 }

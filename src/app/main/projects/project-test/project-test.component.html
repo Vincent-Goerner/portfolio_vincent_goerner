@@ -21,9 +21,9 @@
             }
         </div>
         <div class="project-btn">
-            <a href="{{ projectData.projects[projectIndex].link }}" class="btn">GitHub <img
+            <a (click)="projectData.openNewTab(projectData.projects[projectIndex].link)" class="btn">GitHub <img
                     src="./assets/img/projects/arrow_green.png"></a>
-            <a href="{{ projectData.projects[projectIndex].test }}" class="btn">Live Test <img src="./assets/img/projects/arrow_green.png"></a>
+            <a (click)="projectData.openNewTab(projectData.projects[projectIndex].test)" class="btn">Live Test <img src="./assets/img/projects/arrow_green.png"></a>
         </div>
     </div>
     <div class="project-example">

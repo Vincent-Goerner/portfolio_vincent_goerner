@@ -18,7 +18,7 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       technologies_logo: [0, 1, 2, 3],
       img: './assets/img/projects/join.png',
-      preview: './assets/img/projects/join_preview.png',
+      preview: './assets/img/projects/join_preview.jpg',
       link: 'https://github.com/A1exi0sD4rc/Join',
       test: 'https://vincentgoerner.com/Join/board.html',
       descriptionEN: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -66,5 +66,9 @@ export class ProjectsComponent {
 
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
+  }
+
+  openNewTab(a: string) {
+    window.open(a);
   }
 }
