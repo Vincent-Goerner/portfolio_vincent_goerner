@@ -58,16 +58,32 @@ export class ProjectsComponent {
   loadIndex: number = 0;
   showProjectDetails: boolean = false;
 
-
+  /**
+    * Sets the project data by updating the loadIndex and showing the project details.
+    *
+    * @param {number} i - The index to load the project data.
+    * @returns {void}
+  */
   setProjectData(i: number) {
     this.loadIndex = i;
     this.showProjectDetails = true;
   }
 
+  /**
+    * Returns the translated path for the selected language.
+    *
+    * @returns {string} The translated path for the selected language.
+  */
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }
 
+  /**
+    * Opens a new browser tab with the specified URL.
+    *
+    * @param {string} a - The URL to open in the new tab.
+    * @returns {void}
+  */
   openNewTab(a: string) {
     window.open(a);
   }

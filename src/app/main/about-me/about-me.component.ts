@@ -11,6 +11,11 @@ import { TranslationService } from '../../services/translation.service';
 export class AboutMeComponent {
   translatedData = inject(TranslationService);
 
+  /**
+    * Returns the translated path for the selected language.
+    *
+   * @returns {string} The translated path for the selected language.
+  */
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }

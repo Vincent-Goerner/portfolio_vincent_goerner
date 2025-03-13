@@ -59,7 +59,9 @@
         border-bottom: solid 1px #337C6F;
     }
 
-    .input-name, .input-email, .input-text {
+    .input-name,
+    .input-email,
+    .input-text {
         &:hover {
             transition: all 250ms ease-in-out;
             border-top: solid 1px $green;
@@ -73,7 +75,8 @@
         color: #3DCFB6;
     }
 
-    input, textarea {
+    input,
+    textarea {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -112,18 +115,18 @@
             display: flex;
             gap: 8px;
             position: relative;
-    
+
             span {
                 margin: 0;
                 color: $green;
             }
-    
+
             a {
                 font-family: 'fira code';
                 text-decoration: none;
                 color: $green;
                 cursor: pointer;
-    
+
                 &:hover {
                     color: white;
                 }
@@ -135,7 +138,7 @@
             transition: all 125ms ease-in-out;
             margin-left: 32px;
             font-size: 24px;
-            color: red;            
+            color: red;
         }
     }
 
@@ -164,20 +167,28 @@
         text-decoration: none;
         cursor: pointer;
         transition: all 125ms ease-in-out;
-    
+
         span {
             cursor: pointer;
             transition: all 125ms ease-in-out;
         }
-    
+
         &:hover {
             color: $green;
             border: solid 1px $green;
-    
+
             span {
                 animation: moveText 1.5s linear infinite;
             }
         }
+    }
+
+    >.submit-message {
+        opacity: 0;
+        transition: all 125ms ease-in-out;
+        margin-left: 32px;
+        font-size: 24px;
+        color: $green;
     }
 }
 
@@ -269,7 +280,8 @@
             gap: 10px;
         }
 
-        input, textarea {
+        input,
+        textarea {
             font-size: 16px;
         }
     }

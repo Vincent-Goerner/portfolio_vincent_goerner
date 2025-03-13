@@ -238,6 +238,21 @@
 
 /* media compatibility */
 
+@media (min-width: 1000px) and (max-height: 1200px) {
+
+    .clue-img-box {
+        >.clue-mobile-mail {
+            display: flex;
+        }
+    }
+
+    .clue-contact {
+        .clue-mail {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
 
     .above-the-fold-bg {

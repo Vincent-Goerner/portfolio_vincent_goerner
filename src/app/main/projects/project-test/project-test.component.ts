@@ -15,10 +15,22 @@ export class ProjectTestComponent {
   projectData = inject(ProjectsComponent);
   @Input()projectIndex = 0;
 
+  /**
+    * Loads the next project by incrementing the loadIndex.
+    * If the last project is reached, it loops back to the first project.
+    *
+    * @returns {void}
+  */
   closeDetails() {
     this.projectData.showProjectDetails = false;
   }
 
+  /**
+    * Loads the next project by incrementing the loadIndex.
+    * If the last project is reached, it loops back to the first project.
+    *
+    * @returns {void}
+  */
   loadNextProject() {
     if (this.projectData.loadIndex < this.projectData.projects.length - 1) {
       this.projectData.loadIndex++;
@@ -27,6 +39,11 @@ export class ProjectTestComponent {
     }
   }
 
+  /**
+    * Returns the translated path for the selected language.
+    *
+    * @returns {string} The translated path for the selected language.
+  */
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }

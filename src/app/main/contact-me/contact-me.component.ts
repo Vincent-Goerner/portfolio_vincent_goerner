@@ -25,6 +25,8 @@ export class ContactMeComponent {
   }
   mailTest = false;
   submitFail = false;
+  submitted = false;
+
   post = {
     endPoint: 'https://vincentgoerner.com/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -36,6 +38,15 @@ export class ContactMeComponent {
     },
   };
 
+  /**
+    * Handles form submission. Sends data via HTTP POST if the form is valid and not in test mode.
+    * If in test mode, it resets the form without sending data.
+    *
+    * @param {NgForm} ngForm - The form object containing the form data and status.
+    * @returns {void}
+    *
+    * @note If the project is hosted locally, an error may occur, and this is expected behavior.
+  */
   onSubmit(ngForm: NgForm) { // wenn das Project lokal gehostet wird kommt ein Fehler und das MUSS so sein
     let checkbox = <HTMLInputElement> document.getElementById('checkbox');
     if (ngForm.submitted && ngForm.valid && !this.mailTest) {
@@ -44,15 +55,37 @@ export class ContactMeComponent {
           next: (response) => {
             ngForm.resetForm();
             checkbox.checked = false;
+            this.toggleCheckbox();
+            this.submitMessage();
           },
           error: (error) => {console.error(error)},
-          complete: () => console.info('send post complete'),
+          complete: () => {},
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // für Testmodus
       ngForm.resetForm();
     }
   }
 
+  /**
+    * Sets the `submitted` property to `true` and resets it to `false` after 2 seconds.
+    * 
+    * @function submitMessage
+    * @returns {void} Does not return anything.
+  */
+  submitMessage() {
+    this.submitted = true;
+    setTimeout (() => {
+      this.submitted = false;
+    }, 5000);
+  }
+
+  /**
+    * Toggles the checkbox state and sets the submitFail flag accordingly.
+    * If the checkbox is unchecked, submitFail is set to true.
+    * If the checkbox is checked, submitFail is set to false.
+    *
+    * @returns {void}
+  */
   toggleCheckbox() {
     this.contactData.checkbox = !this.contactData.checkbox;
     if (!this.contactData.checkbox) {
@@ -62,10 +95,20 @@ export class ContactMeComponent {
     }
   }
 
+  /**
+    * Returns the translated path for the selected language.
+    *
+    * @returns {string} The translated path based on the selected language.
+  */
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }
 
+  /**
+    * Navigates to the privacy policy page and scrolls to the top after a short delay.
+    *
+    * @returns {void}
+  */
   openPrivacyPolicy() {
     this.router.navigateByUrl('privacy-policy');
     setTimeout(() => {
@@ -73,6 +116,11 @@ export class ContactMeComponent {
     }, 100);
   }
 
+  /**
+    * Scrolls the window to the top.
+    *
+    * @returns {void}
+  */
   scrollToTop() {
     window.scrollTo({
       top: 0,

@@ -53,6 +53,11 @@ export class SkillsComponent {
     },
   ];
 
+  /**
+    * Returns the translated path for the selected language.
+    *
+    * @returns {string} The translated path for the selected language.
+  */
   setPath() {
     return this.translatedData.translate[this.translatedData.selectedLanguage];
   }

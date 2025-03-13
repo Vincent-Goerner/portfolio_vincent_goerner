@@ -26,15 +26,15 @@ export class TranslationService {
       ABOUTME: {
         H3: 'Who I Am',
         H1: 'About me',
-        TEXT1: 'Hi, i`m a german speaking Fullstack Developer based in Dresden. Motivated by the limitless opportunities within IT. I am excited about crafting visually captivating and intuitive websites and applications.',
-        TEXT2: 'Flexible in terms of working environments, i can work effectively both on-site in Dresden and remotely.',
-        TEXT3: 'I am open-minded and always looking for personal challanges to constantly improve my knownledge and skills.',
-        TEXT4: 'In my profession, programming isn`t just about wiriting code; it`s a creative form of problem-solving, i take pride in my ability to distill complex technical challanges into simple, user-friendly solutions. This way, i help you achieve your goals and bring your visions to life.'
+        TEXT1: 'Hello, I’m a frontend developer from Radeberg, motivated by the nearly limitless opportunities in IT. I’m passionate about creating visually appealing and user-friendly websites and applications.',
+        TEXT2: 'Currently, I work at B. Braun in quality assurance, specifically in gauge management. There, I ensure that processes run smoothly and stay within the defined parameters.',
+        TEXT3: 'I am open-minded and always looking for new challenges to continuously expand my knowledge and skills.',
+        TEXT4: 'In my profession, programming is more than just writing code – it’s a creative approach to problem-solving. I take pride in translating complex technical challenges into simple, user-friendly solutions.'
       },
       SKILLS: {
         H3: 'Technologies',
         H1: 'Skill Set',
-        TEXT1: 'My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
+        TEXT1: 'My journey has included working on various projects and utilizing a range of frontend technologies and concepts. I am always open to new technologies and methods to continuously expand my skills and stay at the forefront of the ever-evolving world of web development.',
         H2CLASS: 'You need',
         H2: 'another skill?',
         TEXT2: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
@@ -76,7 +76,8 @@ export class TranslationService {
         POLICY2: 'privacy policy',
         POLICY3: 'and agree to the processing of my data as outlined.',
         POLICYERROR: 'Please accept the privacy policy',
-        BTN: 'Say Hello ;)'
+        BTN: 'Say Hello ;)',
+        TEXT4: 'Succesfully sent'
       },
       LEGALNOTICE: {
         H1: 'Legal Notice',
@@ -168,7 +169,7 @@ export class TranslationService {
         H1: 'Vincent Görner',
         WORK: 'Meine Projekte',
         CONTACT: 'Konatkt',
-        MARQUEE1: 'Verfügbar für Home Office',
+        MARQUEE1: 'Für Home Office verfügbar',
         MARQUEE2: 'Frontend Entwickler',
         MARQUEE3: 'Wohnhaft in Radeberg',
         MARQUEE4: 'Offen für Weiterentwicklung'
@@ -176,20 +177,20 @@ export class TranslationService {
       ABOUTME: {
         H3: 'Wer bin ich',
         H1: 'Über mich',
-        TEXT1: 'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler, wohnhaft in Radeberg. Motiviert durch die grenzenlosen Möglichkeiten innerhalb der IT. Es begeistert mich, visuell fesselnde und intuitive Websites und Anwendungen zu erstellen.',
-        TEXT2: 'Momentan Arbeite ich bei B|Braun im der Qualitätsmanagment und stelle sicher das Prozesse stabil und innerhalb der Parameter laufen.',
-        TEXT3: 'Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten stetig zu verbessern.',
-        TEXT4: 'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.'
+        TEXT1: 'Hallo, ich bin ein Frontend-Entwickler aus Radeberg und motiviert durch die nahezu unbegrenzten Möglichkeiten der IT. Es begeistert mich, visuell ansprechende und benutzerfreundliche Webseiten sowie Anwendungen zu erstellen',
+        TEXT2: 'Derzeit arbeite ich bei B. Braun in der Qualitätssicherung, genauer gesagt in der Prüfmittelüberwachung. Dort sorge ich dafür, dass Prozesse stabil laufen und innerhalb der vorgegebenen Parameter bleiben.',
+        TEXT3: 'Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern.',
+        TEXT4: 'In meinem Beruf ist Programmieren mehr als nur Code zu schreiben – es ist eine kreative Herangehensweise an die Lösung von Problemen. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen.'
       },
       SKILLS: {
         H3: 'Technologien',
         H1: 'Fähigkeiten',
-        TEXT1: 'Meine Reise umfasste die Arbeit an verschiedenen Projekten und den Einsatz verschiedener Frontend-Technologien und -Konzepte. Ich bin offen für die Nutzung neuer Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.',
+        TEXT1: 'Meine Reise umfasste die Arbeit an verschiedenen Projekten sowie den Einsatz diverser Frontend-Technologien und -Konzepte. Ich bin stets offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu erweitern und in der sich ständig weiterentwickelnden Welt der Webentwicklung an der Spitze zu bleiben.',
         H2CLASS: 'Sie benötigen',
         H2: 'andere Fertigkeiten?',
         TEXT2: 'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
         BTN: 'Lass uns reden',
-        MINDSET: 'Lernbegeistert',
+        MINDSET: 'Lernorientiert',
         INTREST: 'Ich interessiere mich besonders für'
       },
       PROJECTS: {
@@ -209,7 +210,7 @@ export class TranslationService {
         H3: 'Kontakt',
         H1: 'Lasst uns zusammenarbeiten',
         H2: 'Haben Sie ein Problem zu lösen?',
-        TEXT1: 'Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.',
+        TEXT1: 'Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit, zu Ihren Projekten beizutragen.',
         TEXT2: 'Brauchen Sie einen Frontend-Entwickler?',
         TEXT3: 'Lasst uns reden!',
         NAMELABEL: 'Wie ist Ihr Name?',
@@ -226,7 +227,8 @@ export class TranslationService {
         POLICY2: 'Datenschutzerklärung',
         POLICY3: 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
         POLICYERROR: 'Bitte Datenschutzerklärung akzeptieren',
-        BTN: 'Sag Hallo ;)'
+        BTN: 'Sag Hallo ;)',
+        TEXT4: 'Erfolgreich versendet'
       },
       LEGALNOTICE: {
         H1: 'Impressum',
