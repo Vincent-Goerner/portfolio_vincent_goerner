@@ -34,7 +34,7 @@ export class TranslationService {
       SKILLS: {
         H3: 'Technologies',
         H1: 'Skill Set',
-        TEXT1: 'My journey has included working on various projects and utilizing a range of frontend technologies and concepts. I am always open to new technologies and methods to continuously expand my skills and stay at the forefront of the ever-evolving world of web development.',
+        TEXT1: 'My journey has included working on various projects and utilizing a range of frontend technologies and concepts. I am always open to new technologies and methods to continuously expand my skills.',
         H2CLASS: 'You need',
         H2: 'another skill?',
         TEXT2: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
@@ -185,7 +185,7 @@ export class TranslationService {
       SKILLS: {
         H3: 'Technologien',
         H1: 'Fähigkeiten',
-        TEXT1: 'Meine Reise umfasste die Arbeit an verschiedenen Projekten sowie den Einsatz diverser Frontend-Technologien und -Konzepte. Ich bin stets offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu erweitern und in der sich ständig weiterentwickelnden Welt der Webentwicklung an der Spitze zu bleiben.',
+        TEXT1: 'Meine Reise umfasste die Arbeit an verschiedenen Projekten sowie den Einsatz diverser Frontend-Technologien und -Konzepte. Ich bin stets offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu erweitern.',
         H2CLASS: 'Sie benötigen',
         H2: 'andere Fertigkeiten?',
         TEXT2: 'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',

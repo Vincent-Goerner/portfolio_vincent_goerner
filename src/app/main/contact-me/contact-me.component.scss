@@ -144,7 +144,7 @@
 
     .contact-me-form-checkbox {
         width: 18px;
-        height: 18px;
+        min-height: 18px;
         cursor: pointer;
         accent-color: $gray;
         outline: solid 1px $green;
