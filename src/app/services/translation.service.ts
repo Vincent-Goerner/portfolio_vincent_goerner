@@ -177,15 +177,15 @@ export class TranslationService {
       ABOUTME: {
         H3: 'Wer bin ich',
         H1: 'Über mich',
-        TEXT1: 'Hallo, ich bin ein Frontend-Entwickler aus Radeberg und motiviert durch die nahezu unbegrenzten Möglichkeiten der IT. Es begeistert mich, visuell ansprechende und benutzerfreundliche Webseiten sowie Anwendungen zu erstellen',
+        TEXT1: 'Hallo, ich bin Frontend-Entwickler aus Radeberg und motiviert durch die nahezu unbegrenzten Möglichkeiten der IT. Es begeistert mich, visuell ansprechende und benutzerfreundliche Webseiten sowie Anwendungen zu erstellen',
         TEXT2: 'Derzeit arbeite ich bei B. Braun in der Qualitätssicherung, genauer gesagt in der Prüfmittelüberwachung. Dort sorge ich dafür, dass Prozesse stabil laufen und innerhalb der vorgegebenen Parameter bleiben.',
         TEXT3: 'Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern.',
-        TEXT4: 'In meinem Beruf ist Programmieren mehr als nur Code zu schreiben – es ist eine kreative Herangehensweise an die Lösung von Problemen. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen.'
+        TEXT4: 'In meinem Leben ist Programmieren mehr als nur Code zu schreiben – es ist eine kreative Herangehensweise an die Lösung von Problemen. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen.'
       },
       SKILLS: {
         H3: 'Technologien',
         H1: 'Fähigkeiten',
-        TEXT1: 'Meine Reise umfasste die Arbeit an verschiedenen Projekten sowie den Einsatz diverser Frontend-Technologien und -Konzepte. Ich bin stets offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu erweitern.',
+        TEXT1: 'Meine Reise umfasste die Arbeit an verschiedenen Projekten, sowie den Einsatz diverser Frontend-Technologien und -Konzepte. Ich bin stets offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu erweitern.',
         H2CLASS: 'Sie benötigen',
         H2: 'andere Fertigkeiten?',
         TEXT2: 'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
