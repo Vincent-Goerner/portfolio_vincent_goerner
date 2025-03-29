@@ -154,7 +154,7 @@ export class TranslationService {
       },
       FOOTER: {
         TEXT1: 'Web Developer',
-        TEXT2: 'Dresden Germany',
+        TEXT2: 'Radeberg, Germany',
         LINK: 'Legal Notice',
       }
     },

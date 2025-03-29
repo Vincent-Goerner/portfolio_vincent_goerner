@@ -43,6 +43,15 @@
     }
 }
 
+.disabled {
+    border: solid 1px gray !important;
+    color: gray !important;
+
+    &:hover {
+        border: solid 1px gray !important;
+    }
+}
+
 @keyframes moveText {
     0% {
         transform: translateX(0%);

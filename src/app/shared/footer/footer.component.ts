@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class FooterComponent {
   translatedData = inject(TranslationService);
   router = inject(Router);
-  github = "https://github.com/A1exi0sD4rc";
+  github = "https://github.com/Vincent-Goerner?tab=repositories";
   linkedin = "https://www.linkedin.com/in/vincent-g%C3%B6rner-3b48a6353/";
 
   /**

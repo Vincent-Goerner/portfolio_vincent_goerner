@@ -35,17 +35,6 @@ export class ProjectsComponent {
       descriptionEN: 'Jump, run and throw game based on object-oriented approach. Collect coins and fight your way through the hordes of the undead and defeat the evil behind them.',
       descriptionDE: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Sammle Münzen und kämpf dich durch die Horden der Untoten und besiege das bösartige Übel hinter ihnen.'
     },
-    {
-      name: 'DaBubble',
-      technologies: ['HTML', 'CSS', 'Angular', 'Typescript', 'Firebase'],
-      technologies_logo: [1, 2, 4, 5, 3],
-      img: './assets/img/projects/coming_soon.jpg',
-      preview: './assets/img/projects/coming_soon.jpg',
-      link: '#',
-      test: '',
-      descriptionEN: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-      descriptionDE: 'Diese App ist eine Slack-Clone-App. Es revolutioniert die Teamkommunikation und Zusammenarbeit mit seiner intuitiven Benutzeroberfläche, Echtzeit-Messaging und einer robusten Kanalorganisation.'
-    },
   ];
   technologieImg = [
     './assets/img/projects/html.png',

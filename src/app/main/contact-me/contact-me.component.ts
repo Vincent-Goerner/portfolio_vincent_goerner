@@ -66,6 +66,15 @@ export class ContactMeComponent {
     }
   }
 
+  validForm (ngForm: NgForm) {
+    if (!this.contactData.checkbox) {
+      this.submitFail = true;
+    } else {
+      this.submitFail = false;
+      this.onSubmit(ngForm);
+    }
+  }
+
   /**
     * Sets the `submitted` property to `true` and resets it to `false` after 2 seconds.
     * 
@@ -88,11 +97,6 @@ export class ContactMeComponent {
   */
   toggleCheckbox() {
     this.contactData.checkbox = !this.contactData.checkbox;
-    if (!this.contactData.checkbox) {
-      this.submitFail = true;
-    } else {
-      this.submitFail = false;
-    }
   }
 
   /**
