@@ -20,7 +20,7 @@ export class ProjectsComponent {
       img: './assets/img/projects/join.png',
       preview: './assets/img/projects/join_preview.jpg',
       link: 'https://github.com/A1exi0sD4rc/Join',
-      test: 'https://vincentgoerner.com/Join/board.html',
+      test: 'https://join.vincentgoerner.com/',
       descriptionEN: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       descriptionDE: 'Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.'
     },
@@ -31,7 +31,7 @@ export class ProjectsComponent {
       img: './assets/img/projects/tlotl_2.png',
       preview: './assets/img/projects/tlotl_preview.png',
       link: 'https://github.com/A1exi0sD4rc/The-Legacy-of-the-Living',
-      test: 'https://vincentgoerner.com/The%20Legacy%20of%20the%20Living/index.html',
+      test: 'https://the-legacy-of-the-living.vincentgoerner.com/',
       descriptionEN: 'Jump, run and throw game based on object-oriented approach. Collect coins and fight your way through the hordes of the undead and defeat the evil behind them.',
       descriptionDE: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Sammle Münzen und kämpf dich durch die Horden der Untoten und besiege das bösartige Übel hinter ihnen.'
     },

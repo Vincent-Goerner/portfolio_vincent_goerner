@@ -28,7 +28,7 @@ export class ContactMeComponent {
   submitted = false;
 
   post = {
-    endPoint: 'https://vincentgoerner.com/portfolio/sendMail.php',
+    endPoint: 'https://vincentgoerner.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
