@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 
 export class ContactMeComponent {
   translatedData = inject(TranslationService);
-  router = inject(Router);
+  private router = inject(Router);
   http = inject(HttpClient);
 
   contactData = {
@@ -48,7 +48,7 @@ export class ContactMeComponent {
     * @note If the project is hosted locally, an error may occur, and this is expected behavior.
   */
   onSubmit(ngForm: NgForm) { // wenn das Project lokal gehostet wird kommt ein Fehler und das MUSS so sein
-    let checkbox = <HTMLInputElement> document.getElementById('checkbox');
+    let checkbox = <HTMLInputElement>document.getElementById('checkbox');
     if (ngForm.submitted && ngForm.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -58,16 +58,23 @@ export class ContactMeComponent {
             this.toggleCheckbox();
             this.submitMessage();
           },
-          error: (error) => {console.error(error)},
-          complete: () => {},
+          error: (error) => { console.error(error) },
+          complete: () => { },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // für Testmodus
       ngForm.resetForm();
     }
   }
 
-  validForm (ngForm: NgForm) {
-    if (!this.contactData.checkbox) {
+  /**
+    * Validates the form and checks if the checkbox is selected.
+    * If invalid and checkbox is not checked, sets error status.
+    *
+    * @param {NgForm} ngForm - The Angular form object containing form data and validation status.
+    * @returns {void}
+  */
+  validForm(ngForm: NgForm) {
+    if (!this.contactData.checkbox && !ngForm.valid) {
       this.submitFail = true;
     } else {
       this.submitFail = false;
@@ -83,7 +90,7 @@ export class ContactMeComponent {
   */
   submitMessage() {
     this.submitted = true;
-    setTimeout (() => {
+    setTimeout(() => {
       this.submitted = false;
     }, 5000);
   }

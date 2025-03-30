@@ -51,7 +51,7 @@
                     </div>
                     <p [class.opacity-full]="this.submitFail">{{ this.setPath().CONTACTME.CHECKERROR }}</p>
                 </div>
-                <button id="submit-btn" type="submit" class="btn" [class.disabled]="!contactData.checkbox" [disabled]="!contactData.checkbox">{{ this.setPath().CONTACTME.BTN }}</button>
+                <button id="submit-btn" type="submit" class="btn" [class.disabled]="!contactData.checkbox || !name.valid || !email.valid || !message.valid" [disabled]="!contactData.checkbox">{{ this.setPath().CONTACTME.BTN }}</button>
                 <p [class.opacity-full]="this.submitted" class="submit-message">{{ this.setPath().CONTACTME.TEXT4 }}</p>
             </div>
         </form>

@@ -1,15 +1,16 @@
-@import '../shared/general.scss';
+@import '../../shared/general.scss';
+@import '../../shared/variables.scss';
 
-.pp-bg {
+.legal-notice-bg {
     background-color: $gray;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 100px;
-    height: fit-content;
+    height: 100vh;
 }
 
-.privacy-policy {
+.legal-notice {
     max-width: 1440px;
 
     h1 {
@@ -19,7 +20,6 @@
     a {
         text-decoration: none;
         color: white;
-        font-family: 'karla';
     }
 
     p {
@@ -35,7 +35,11 @@
 
 @media (max-width: 900px) {
     
-    .privacy-policy {
+    .legal-notice-bg {
+        height: fit-content;
+    }
+    
+    .legal-notice {
         width: 360px;
 
         h1 {
@@ -58,7 +62,7 @@
 
 @media (max-width: 400px) {
     
-    .privacy-policy {
+    .legal-notice {
         width: 300px;
 
         h1 {
